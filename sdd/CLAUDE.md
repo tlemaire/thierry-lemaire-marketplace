@@ -8,24 +8,6 @@ This is the **SDD (Spec-Driven Development) skill** - a Claude Code exclusive sk
 
 ## Key Commands
 
-### Development & Testing
-```bash
-# Install dependencies and setup
-npm install
-
-# Run tests
-npm test
-
-# Install/uninstall the skill globally
-npm run install
-npm run uninstall
-
-# Check for Spec Kit updates
-npm run update
-# or
-./scripts/bash/check-spec-kit-updates.sh
-```
-
 ### SDD Workflow Commands
 These are the core SDD slash commands used within Claude Code:
 - `/sdd.help` - Display comprehensive help and workflow guidance
@@ -38,30 +20,14 @@ These are the core SDD slash commands used within Claude Code:
 - `/sdd.analyze` - Analyze consistency between spec, plan, and constitution
 - `/sdd.implement` - Execute implementation tasks in dependency order
 
-### Utility Scripts
-```bash
-# Create new feature specification
-./scripts/bash/create-new-feature.sh "<feature description>"
-
-# Setup implementation plan for current feature
-./scripts/bash/setup-plan.sh
-
-# Generate tasks from plan
-./scripts/bash/generate-tasks.sh
-
-# Sync with latest Spec Kit version
-./scripts/bash/sync-sdd-with-speckit.sh [version]
-```
-
 ## Architecture
 
 ### Core Components
 
 1. **Skill Definition** (`SDD.md`): Main skill documentation and command reference
-2. **Package Configuration** (`package.json`): Claude Code skill metadata and npm scripts
-3. **Bash Scripts** (`scripts/bash/`): Automation utilities for SDD workflow
-4. **Specification Templates**: Generated templates for specs, plans, and tasks
-5. **Feature Management** (`specs/`): Organized feature specifications and implementation plans
+2. **Plugin Configuration** (`.claude-plugin/plugin.json`): Claude Code plugin metadata and manifest
+3. **Slash Commands** (`commands/`): 9 SDD workflow commands with YAML frontmatter
+4. **Generated Structure**: Dynamic creation of specs, plans, tasks, and quality checklists
 
 ### Generated Structure
 
@@ -117,32 +83,28 @@ The skill stays synchronized with GitHub Spec Kit:
 ### When Modifying the Skill
 1. Test SDD commands end-to-end after changes
 2. Verify compatibility with latest Claude Code version
-3. Ensure bash scripts work across different shells (bash, zsh)
+3. Ensure all command files have proper YAML frontmatter
 4. Update documentation for any new commands or workflows
 
 ### When Adding Features
 - Follow the existing slash command pattern (`/sdd.<command>`)
+- Create command files in `commands/` directory with YAML frontmatter
 - Update both `SDD.md` and `README.md` documentation
-- Add corresponding bash scripts if automation is needed
 - Test with various feature descriptions and tech stacks
 
 ### Quality Assurance
-- Run `npm test` before committing changes
 - Test SDD workflow with sample specifications
-- Verify generated templates are valid and complete
+- Verify all commands have proper YAML structure
+- Ensure generated templates are valid and complete
 - Check Git integration works correctly
 
 ## Environment Variables
 
-Optional environment variables for customization:
-- `SPECIFY_FEATURE`: Current feature branch name (auto-set by scripts)
-- `SDD_SKILL_HOME`: Custom installation directory (defaults to ~/.claude/skills/sdd)
-- `SDD_GLOBAL_ENABLED`: Enable global skill availability (true/false)
+No specific environment variables are required for the marketplace plugin. All functionality is handled through Claude Code's built-in capabilities and the SDD slash commands.
 
 ## File Dependencies
 
 The skill depends on these external tools:
 - Git (for branch management and version control)
-- Node.js 14+ (for npm scripts and installation)
 - Claude Code 2.0.37+ (for slash commands and integration)
-- GitHub Spec Kit (for specification framework synchronization)
+- GitHub Spec Kit methodology (for specification framework principles)
