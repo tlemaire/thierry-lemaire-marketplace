@@ -220,10 +220,10 @@ claude plugin install sdd@thierry-lemaire-marketplace
 ```
 
 **Sample Directory Reference**: `samples/` directory contains complete examples for all complexity levels:
-- `samples/hello-world/` - Static HTML/CSS implementation
-- `samples/portfolio/` - Professional portfolio with SEO
-- `samples/kanban/` - Real-time collaboration system
-- `samples/authentication/` - Full feature demonstration
+- `samples/01-beginner/hello-world/` - Static HTML/CSS implementation
+- `samples/02-intermediate/portfolio/` - Professional portfolio with SEO
+- `samples/03-advanced/kanban/` - Real-time collaboration system
+- `samples/04-reference/authentication/` - Full feature demonstration
 
 ## Dependencies
 

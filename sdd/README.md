@@ -2,55 +2,113 @@
 
 Transform ideas into structured specifications and executable code through a systematic workflow optimized for Claude Code.
 
-## Overview
+## What is SDD?
 
-SDD implements the Spec-Driven Development methodology with built-in KISS and YAGNI principles, environment management, and development automation.
+**SDD (Spec-Driven Development)** is a systematic methodology that transforms ideas into structured specifications and executable code through a standardized workflow. Inspired by GitHub Spec Kit principles, SDD emphasizes clear requirements, traceability, and quality by design.
 
-## Quick Start
+### Core Philosophy
+- **Specification First**: Define WHAT and WHY before HOW
+- **Iterative Development**: Every change follows the same structured workflow
+- **Quality by Design**: Built-in checklists and consistency analysis
+- **Traceability**: Direct links from requirements to implementation
+- **Anti-Abstraction**: Use frameworks directly without unnecessary layers
 
+## Why Use SDD?
+
+**For Individual Developers:**
+- 🎯 **Clarity**: Eliminate scope creep and ambiguous requirements
+- ⚡ **Speed**: Automated task generation and environment setup
+- 🔧 **Consistency**: Standardized approach across all projects
+- 📈 **Quality**: Built-in QA processes and best practices
+
+**For Teams:**
+- 🤝 **Collaboration**: Shared understanding through clear specifications
+- 📋 **Traceability**: Track features from idea to deployment
+- 🔄 **Onboarding**: Easy for new members to understand project structure
+- 📊 **Visibility**: Clear progress tracking and documentation
+
+**For Enterprise:**
+- 🏛️ **Governance**: Consistent methodology across projects
+- 🔒 **Quality Assurance**: Built-in checklists and validation
+- 📈 **Scalability**: Methodology scales from simple to complex projects
+- 💰 **Efficiency**: Reduced rework and miscommunication
+
+## How to Use SDD
+
+### The SDD Workflow
+
+SDD follows a systematic 8-step workflow that transforms ideas into production-ready code:
+
+1. **🏛️ Constitution** - Define project principles and quality standards
+2. **📋 Specify** - Transform ideas into structured specifications
+3. **❓ Clarify** - (Optional) Resolve specification ambiguities interactively
+4. **🏗️ Plan** - Generate detailed technical implementation plan
+5. **📝 Tasks** - Break down into 25 dependency-organized implementation tasks
+6. **✅ Checklists** - Generate quality assurance checklists
+7. **📊 Analyze** - (Optional) Ensure consistency between all artifacts
+8. **🚀 Implement** - Execute tasks in logical dependency order
+
+### Getting Started
+
+**For Beginners - Start Simple:**
 ```bash
-# Get started with SDD
+# Learn the workflow
 /sdd.help
 
-# Complete project setup
-/sdd.constitution "Follow KISS principles, use React, TypeScript"
-/sdd.specify "Add user authentication system"
-/sdd.plan "React, TypeScript, Node.js, PostgreSQL"
+# Your first project (1 hour)
+/sdd.constitution "Simple, no dependencies, fast loading"
+/sdd.specify "Create a simple landing page with contact form"
+/sdd.plan "HTML5, CSS3, vanilla JavaScript"
+/sdd.tasks
+```
+
+**For Intermediate Projects:**
+```bash
+# Professional portfolio website (2-4 weeks)
+/sdd.constitution "Professional presentation, SEO optimized, mobile-first"
+/sdd.specify "Build a portfolio showcasing React and Node.js projects"
+/sdd.plan "Modern web technologies, static hosting, performance optimized"
 /sdd.tasks
 /sdd.implement
 ```
 
-## Complete Command Set
+**For Advanced Team Projects:**
+```bash
+# Enterprise kanban system (6-8 weeks)
+/sdd.constitution "Real-time collaboration, enterprise security, scalability"
+/sdd.specify "Build collaborative kanban system with team features"
+/sdd.plan "React, TypeScript, Node.js, PostgreSQL, Socket.IO"
+/sdd.tasks
+/sdd.implement
+```
 
-**Foundation Commands:**
-- `/sdd.help` - Display comprehensive help and workflow guidance
-- `/sdd.constitution` - Define project principles with KISS/YAGNI guidelines
+### Best Practices
 
-**Specification Phase:**
-- `/sdd.specify` - Create structured specification from natural language
-- `/sdd.clarify` - Resolve specification ambiguities interactively
+- Start with simple projects
+- Every feature follows the SDD workflow
+- Use `.clarify` for ambiguous specifications
+- Share specifications before implementation
 
-**Planning Phase:**
-- `/sdd.plan` - Generate technical implementation plan with environment setup
-- `/sdd.tasks` - Create 25 dependency-organized implementation tasks
+## Commands
 
-**Quality Assurance:**
-- `/sdd.checklist` - Generate quality checklists (requirements, UX, performance, accessibility)
-- `/sdd.analyze` - Analyze consistency between spec, plan, and constitution
+**Foundation:**
+- `/sdd.help` - Show help and workflow guidance
+- `/sdd.constitution` - Define project principles
+
+**Specification:**
+- `/sdd.specify` - Create structured specification
+- `/sdd.clarify` - Resolve specification ambiguities
+
+**Planning:**
+- `/sdd.plan` - Generate technical implementation plan
+- `/sdd.tasks` - Create 25 dependency-organized tasks
+
+**Quality:**
+- `/sdd.checklist` - Generate quality checklists
+- `/sdd.analyze` - Analyze consistency
 
 **Implementation:**
-- `/sdd.implement` - Execute implementation tasks in dependency order
-
-## SDD Workflow
-
-1. **Constitution** - Define project principles with KISS and YAGNI guidelines
-2. **Specify** - Transform ideas into structured specifications with user stories
-3. **Clarify** - (Optional) Resolve specification ambiguities interactively
-4. **Plan** - Generate detailed implementation plans with environment configuration
-5. **Tasks** - Break down into 25 dependency-organized tasks
-6. **Checklists** - Generate quality assurance checklists
-7. **Analyze** - (Optional) Analyze consistency between all artifacts
-8. **Implement** - Execute tasks in logical dependency order
+- `/sdd.implement` - Execute tasks in dependency order
 
 ## Generated Files
 
@@ -87,31 +145,14 @@ Makefile                    # Development automation (15+ commands)
 /sdd.implement
 ```
 
-## Key Features
+## Features
 
-- **🏛️ KISS & YAGNI Principles**: Built-in guidance for simple, maintainable code
-- **🔧 Environment Management**: Automatic .env.example and Makefile generation
-- **📋 25-Task Breakdown**: Comprehensive, dependency-organized implementation tasks
-- **✅ Quality Gates**: Built-in checklists and consistency analysis
-- **🔄 Git Integration**: Automatic branch creation and management
-- **📊 Traceability**: Clear links from requirements through implementation
-
-## Development Tools Generated
-
-**Makefile Commands:**
-- `make help` - Show all available commands
-- `make install` - Install dependencies
-- `make dev` - Start development server
-- `make test` - Run test suite
-- `make build` - Build for production
-- `make deploy` - Deploy application
-- `make lint` - Code quality checks
-- Plus 8+ additional commands for database, cleaning, and utilities
-
-**Environment Files:**
-- `.env.example` - Template with all required variables
-- Support for multiple environments (development, staging, production)
-- Security best practices built-in
+- **KISS & YAGNI Principles**: Built-in guidance for simple code
+- **Environment Management**: Automatic .env.example and Makefile generation
+- **25-Task Breakdown**: Dependency-organized implementation tasks
+- **Quality Gates**: Built-in checklists and consistency analysis
+- **Git Integration**: Automatic branch creation and management
+- **Traceability**: Clear links from requirements to implementation
 
 ## Documentation
 
@@ -119,61 +160,20 @@ Makefile                    # Development automation (15+ commands)
 - [Developer Guide](CLAUDE.md) - Claude-specific guidance and development
 - [Sample Outputs](samples/) - Example SDD-generated files and workflows
 
-## Sample Outputs
+## Samples
 
-Explore the `samples/` directory to see complete examples of SDD-generated files organized by complexity:
+Explore the `samples/` directory for complete examples:
 
-### 🟢 **Beginner Level** - Hello World
-- **Directory**: `samples/hello-world/`
-- **Perfect for**: Learning SDD, simple projects, beginners
-- **Time**: 1 hour total
-- **Technology**: HTML5, CSS3, vanilla JavaScript
+### 🟢 **Hello World** (1 hour) - `samples/01-beginner/`
+### 🟡 **Portfolio** (2-4 weeks) - `samples/02-intermediate/`
+### 🔴 **Kanban** (6-8 weeks) - `samples/03-advanced/`
+### 🔵 **Authentication** - `samples/04-reference/`
 
-### 🟡 **Intermediate Level** - Portfolio Website
-- **Directory**: `samples/portfolio/`
-- **Perfect for**: Personal projects, freelancers, web developers
-- **Time**: 2-4 weeks development
-- **Technology**: Static site with modern web technologies
-
-### 🔴 **Advanced Level** - Kanban Board
-- **Directory**: `samples/kanban/`
-- **Perfect for**: Teams, enterprise applications, complex systems
-- **Time**: 6-8 weeks development
-- **Technology**: Full-stack with real-time collaboration
-
-### 🔵 **Reference** - Authentication System
-- **Directory**: `samples/authentication/`
-- **Complete Example**: Full SDD capability demonstration
-- **Includes**: Environment setup, automation, security
-
-### Complete Documentation
-- **[samples/README.md](samples/README.md)** - Guide to all sample files and complexity levels
-- **[samples/authentication/](samples/authentication/)** - 7 files showing complete SDD output
-- **Individual READMEs**: Each sample has its own guide and context
-
-## Choosing Your Sample
-
-```bash
-# Simple Project (Hello World)
-/sdd.constitution "Simple, no dependencies, fast loading"
-
-# Professional Project (Portfolio)
-/sdd.constitution "Professional, SEO optimized, mobile-first"
-
-# Complex Team Project (Kanban)
-/sdd.constitution "Scalable, real-time collaboration, enterprise security"
-
-# Full Feature Set (Authentication)
-/sdd.constitution "Complete authentication with all security features"
-```
+**Details**: [samples/README.md](samples/README.md)
 
 ## Version
 
-**Version:** 1.0.0
-**Size:** 13 files, 88KB (optimized marketplace plugin)
-**Commands:** 9 comprehensive SDD workflow commands
-**Dependencies:** Git, Claude Code 2.0.37+
-
----
-**Installed from:** Thierry Lemaire Marketplace
-**License:** MIT
+- **Version**: 1.0.0
+- **Commands**: 9 SDD workflow commands
+- **Dependencies**: Git, Claude Code 2.0.37+
+- **License**: MIT
