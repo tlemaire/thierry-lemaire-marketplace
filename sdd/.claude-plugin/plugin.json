@@ -6,5 +6,9 @@
   "tags": ["sdd", "spec-driven-development", "workflow", "specification", "planning", "development", "git"],
   "category": "development",
   "homepage": "https://github.com/tlemaire/thierry-lemaire-marketplace",
-  "author": "Thierry Lemaire"
+  "author": {
+    "name": "Thierry Lemaire",
+    "email": "thierry.lemaire@gmail.com"
+  },
+  "commands": "./commands"
 }
