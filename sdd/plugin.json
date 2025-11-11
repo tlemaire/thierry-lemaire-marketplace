@@ -1,8 +1,10 @@
 {
   "name": "sdd",
-  "description": "Claude Code exclusive skill for implementing Spec-Driven Development using GitHub Spec Kit principles. Transform ideas into structured specifications and executable code through a structured workflow.",
+  "description": "Spec-Driven Development skill for Claude Code. Transform ideas into structured specifications and executable code through a systematic workflow.",
   "version": "1.0.0",
   "license": "MIT",
-  "tags": ["sdd", "spec-driven-development", "workflow", "specification", "planning", "development"],
-  "category": "development"
+  "tags": ["sdd", "spec-driven-development", "workflow", "specification", "planning", "development", "git"],
+  "category": "development",
+  "homepage": "https://github.com/tlemaire/thierry-lemaire-marketplace",
+  "author": "Thierry Lemaire"
 }
