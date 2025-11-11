@@ -47,6 +47,18 @@ Generate detailed technical implementation plan with architecture decisions base
    ## Implementation Approach
    [Development methodology, coding standards]
 
+   ## Environment Configuration
+   [Development, staging, production environments]
+   - Environment variables needed
+   - Configuration management strategy
+   - .env file requirements
+
+   ## Development Workflow
+   [Makefile, scripts, automation]
+   - Build and deployment commands
+   - Development server setup
+   - Testing and linting automation
+
    ## Deployment Strategy
    [Environment setup, CI/CD, infrastructure]
 
@@ -65,7 +77,10 @@ Generate detailed technical implementation plan with architecture decisions base
 
 6. **Create data model documentation**: `data-model.md`
 7. **Generate research file**: `research.md` with technical decisions and alternatives
-8. **Write main plan file**: `specs/XXX-feature-name/plan.md`
+8. **Create environment templates**:
+   - `.env.example` with all required environment variables
+   - `Makefile` with essential development commands
+9. **Write main plan file**: `specs/XXX-feature-name/plan.md`
 
 ## Data Model Section:
 ```markdown
@@ -99,6 +114,115 @@ Generate detailed technical implementation plan with architecture decisions base
 
 ## External Dependencies
 [Third-party services, APIs, libraries]
+```
+
+## Environment Template (.env.example):
+```bash
+# Environment Configuration
+NODE_ENV=development
+PORT=3000
+
+# Database Configuration
+DATABASE_URL=postgresql://user:password@localhost:5432/dbname
+REDIS_URL=redis://localhost:6379
+
+# Authentication
+JWT_SECRET=your-jwt-secret-here
+SESSION_SECRET=your-session-secret-here
+
+# External Services
+API_KEY_EXTERNAL_SERVICE=your-api-key
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your-email@gmail.com
+SMTP_PASS=your-app-password
+
+# Feature Flags
+ENABLE_NEW_FEATURE=true
+DEBUG_MODE=false
+
+# Security
+CORS_ORIGIN=http://localhost:3000
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
+```
+
+## Makefile Template:
+```makefile
+.PHONY: help install dev build test clean lint format check-env setup-db
+
+# Default target
+help:          ## Show this help message
+	@echo "Available commands:"
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
+
+# Environment setup
+install:       ## Install dependencies
+	npm install
+
+check-env:     ## Check if .env file exists
+	@if [ ! -f .env ]; then \
+		echo "Creating .env from .env.example..."; \
+		cp .env.example .env; \
+		echo "Please edit .env with your configuration"; \
+	fi
+
+# Development
+dev: check-env  ## Start development server
+	npm run dev
+
+dev-docker:    ## Start development with Docker
+	docker-compose up -d
+
+# Building and testing
+build:         ## Build for production
+	npm run build
+
+test:          ## Run tests
+	npm run test
+
+test-watch:    ## Run tests in watch mode
+	npm run test:watch
+
+# Code quality
+lint:          ## Run linter
+	npm run lint
+
+format:        ## Format code
+	npm run format
+
+# Database
+setup-db:      ## Setup database
+	npm run db:setup
+
+migrate:       ## Run database migrations
+	npm run db:migrate
+
+seed:          ## Seed database with sample data
+	npm run db:seed
+
+# Cleaning
+clean:         ## Clean build artifacts
+	rm -rf dist node_modules package-lock.json
+
+clean-all: clean ## Clean everything including Docker
+	docker-compose down -v
+
+# Deployment
+deploy-staging: ## Deploy to staging
+	npm run build
+	npm run deploy:staging
+
+deploy-prod:    ## Deploy to production
+	npm run build
+	npm run deploy:production
+
+# Utilities
+logs:          ## Show application logs
+	docker-compose logs -f
+
+shell:         # Open shell in container
+	docker-compose exec app sh
 ```
 
 ## Git Integration:

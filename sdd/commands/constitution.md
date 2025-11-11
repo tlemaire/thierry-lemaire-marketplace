@@ -24,6 +24,7 @@ Create or update project constitution with guiding principles and quality standa
    - **User Experience Principles** - Design consistency, accessibility
    - **Development Workflow** - Git process, review requirements
    - **Deployment Guidelines** - Environments, release process
+   - **Environment Management** - .env files, configuration, secrets
 
 4. **Choose appropriate location** for the constitution:
    - **Preferred**: `CONSTITUTION.md` in project root (simplest, most discoverable)
@@ -98,6 +99,47 @@ Ask these questions before adding complexity:
 - Release processes
 - Monitoring requirements
 
+## Environment Management
+
+### .env Files
+- Use `.env` for local development environment variables
+- Use `.env.example` as template for required variables
+- Never commit `.env` files to version control
+- Use `.env.production`, `.env.staging` for different environments
+
+### Makefile Standards
+- Include essential commands: `install`, `dev`, `build`, `test`, `deploy`
+- Use `.PHONY` for non-file targets
+- Include help target with `make help`
+- Keep make commands simple and consistent
+
+### Common Development Targets
+```makefile
+.PHONY: help install dev build test clean deploy
+
+help:          ## Show this help message
+	@echo "Available commands:"
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
+
+install:       ## Install dependencies
+	npm install
+
+dev:           ## Start development server
+	npm run dev
+
+build:         ## Build for production
+	npm run build
+
+test:          ## Run tests
+	npm run test
+
+clean:         ## Clean build artifacts
+	rm -rf dist node_modules
+
+deploy:        ## Deploy to production
+	npm run build && npm run deploy
+```
+
 ## Practical Application
 
 ### Evolution Path
@@ -151,6 +193,18 @@ class InMemoryUserRepository(UserRepository):
 - Begin with functional components
 - Use local state before global state management
 - Add routing only when navigation complexity grows
+
+**Project Setup Patterns:**
+- Always create `.env.example` with required variables
+- Include `Makefile` with essential development commands
+- Use `make help` for command documentation
+- Keep `.env` in `.gitignore` but commit `.env.example`
+
+**Environment Management:**
+- Separate configs per environment: `.env.development`, `.env.production`
+- Use different database names for each environment
+- Include feature flags in environment variables
+- Document all environment variables in README
 ```
 
 7. **Confirm successful creation** and show next steps in SDD workflow
