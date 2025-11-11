@@ -2,7 +2,10 @@
   "name": "thierry-lemaire-marketplace",
   "description": "Personal marketplace for Claude Code plugins and skills by Thierry Lemaire",
   "version": "1.0.0",
-  "owner": "Thierry Lemaire",
+  "owner": {
+    "name": "Thierry Lemaire",
+    "email": "thierry@example.com"
+  },
   "homepage": "https://github.com/tlemaire/thierry-lemaire-marketplace",
   "plugins": [
     {
