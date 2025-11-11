@@ -117,7 +117,19 @@ Makefile                    # Development automation (15+ commands)
 
 - [Complete Guide](SDD.md) - Full methodology documentation
 - [Developer Guide](CLAUDE.md) - Claude-specific guidance and development
-- [Constitution Examples](../CONSTITUTION.md) - Project principles and standards
+- [Sample Outputs](samples/) - Example SDD-generated files and workflows
+
+## Sample Outputs
+
+Explore the `samples/` directory to see complete examples of SDD-generated files:
+
+- **[CONSTITUTION.md](samples/CONSTITUTION.md)** - Project principles with KISS/YAGNI guidelines
+- **[SPECIFICATION.md](samples/SPECIFICATION.md)** - User authentication system requirements
+- **[IMPLEMENTATION_PLAN.md](samples/IMPLEMENTATION_PLAN.md)** - Technical architecture and API design
+- **[TASK_LIST.md](samples/TASK_LIST.md)** - 25 implementation tasks with detailed breakdown
+- **[.env.example](samples/.env.example)** - Complete environment variables template
+- **[Makefile](samples/Makefile)** - Development automation with 25+ commands
+- **[samples/README.md](samples/README.md)** - Guide to all sample files and usage
 
 ## Version
 
