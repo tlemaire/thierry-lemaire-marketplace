@@ -1,33 +1,86 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with the SDD (Spec-Driven Development) plugin.
 
 ## Project Overview
 
-This is the **SDD (Spec-Driven Development) skill** - a Claude Code exclusive skill that implements the Spec-Driven Development methodology using GitHub Spec Kit principles. The skill transforms ideas into structured specifications and executable code through a workflow optimized for Claude Code.
+This is the **SDD (Spec-Driven Development) plugin** - a Claude Code marketplace plugin that implements the Spec-Driven Development methodology. The plugin transforms ideas into structured specifications and executable code through a systematic workflow optimized for Claude Code's capabilities.
+
+## Plugin Status
+
+**Version**: 1.0.0
+**License**: MIT
+**Author**: Thierry Lemaire
+**Marketplace**: thierry-lemaire-marketplace
+**Commands**: 9 SDD workflow commands
+**Size**: 13 files, optimized for marketplace distribution
 
 ## Key Commands
 
 ### SDD Workflow Commands
-These are the core SDD slash commands used within Claude Code:
+
+These are the core SDD slash commands available in Claude Code:
+
+**Foundation Commands:**
 - `/sdd.help` - Display comprehensive help and workflow guidance
 - `/sdd.constitution <principles>` - Define project principles and quality standards
+
+**Specification Phase:**
 - `/sdd.specify <feature_description>` - Create structured specification from natural language
 - `/sdd.clarify` - Resolve specification ambiguities interactively
+
+**Planning Phase:**
 - `/sdd.plan <tech_stack>` - Generate technical implementation plan
 - `/sdd.tasks` - Create dependency-organized task list
+
+**Quality Assurance:**
 - `/sdd.checklist <type>` - Generate quality checklists (requirements, UX, performance, accessibility)
 - `/sdd.analyze` - Analyze consistency between spec, plan, and constitution
+
+**Implementation:**
 - `/sdd.implement` - Execute implementation tasks in dependency order
 
-## Architecture
+### Command Structure
+
+Each slash command is implemented as a markdown file with YAML frontmatter:
+```yaml
+---
+description: Brief description of command purpose
+shortcut: sdd.command_name
+---
+```
+
+Commands are located in the `commands/` directory and automatically registered by Claude Code.
+
+## Plugin Architecture
+
+### Plugin Structure
+
+```
+sdd/
+├── .claude-plugin/
+│   └── plugin.json              # Plugin manifest and metadata
+├── commands/                     # 9 SDD workflow commands
+│   ├── help.md                   # Comprehensive help and guidance
+│   ├── constitution.md           # Project principles definition
+│   ├── specify.md                # Specification creation
+│   ├── clarify.md                # Ambiguity resolution
+│   ├── plan.md                   # Technical planning
+│   ├── tasks.md                  # Task generation
+│   ├── checklist.md              # Quality checklists
+│   ├── analyze.md                # Consistency analysis
+│   └── implement.md              # Task execution
+├── CLAUDE.md                     # This file - Claude-specific guidance
+├── README.md                     # Plugin documentation
+└── SDD.md                        # Comprehensive skill documentation
+```
 
 ### Core Components
 
-1. **Skill Definition** (`SDD.md`): Main skill documentation and command reference
-2. **Plugin Configuration** (`.claude-plugin/plugin.json`): Claude Code plugin metadata and manifest
-3. **Slash Commands** (`commands/`): 9 SDD workflow commands with YAML frontmatter
-4. **Generated Structure**: Dynamic creation of specs, plans, tasks, and quality checklists
+1. **Plugin Manifest** (`.claude-plugin/plugin.json`): Claude Code plugin metadata
+2. **Slash Commands** (`commands/`): 9 workflow commands with YAML frontmatter
+3. **Documentation**: Comprehensive guides for users and developers
+4. **Dynamic Generation**: Runtime creation of specifications, plans, and quality artifacts
 
 ### Generated Structure
 
@@ -71,40 +124,79 @@ specs/
 - **File Operations**: Uses Claude Code's advanced file handling capabilities
 - **Git Integration**: Automatic branch creation and management when Git repository is detected
 
-### GitHub Spec Kit Sync
-The skill stays synchronized with GitHub Spec Kit:
-- Supports Spec Kit v0.0.79+
-- Automatic update checking available
-- Manual sync with specific versions supported
-- Remote branch checking and enhanced releases
+### Methodology Foundation
+
+The plugin implements the GitHub Spec Kit methodology principles:
+- **Specification-driven approach**: Clear requirements before implementation
+- **Iterative development**: Structured workflow for each change
+- **Quality by design**: Built-in checklists and consistency checks
+- **Traceability**: Clear links from requirements to implementation
+- **Anti-abstraction**: Direct framework usage without unnecessary layers
 
 ## Development Guidelines
 
-### When Modifying the Skill
+### Plugin Maintenance
+
+**When Modifying Commands:**
 1. Test SDD commands end-to-end after changes
-2. Verify compatibility with latest Claude Code version
+2. Verify plugin manifest validation passes
 3. Ensure all command files have proper YAML frontmatter
 4. Update documentation for any new commands or workflows
 
-### When Adding Features
+**When Adding New Commands:**
 - Follow the existing slash command pattern (`/sdd.<command>`)
-- Create command files in `commands/` directory with YAML frontmatter
+- Create command files in `commands/` directory with required YAML frontmatter
+- Include comprehensive implementation guidance in the command file
 - Update both `SDD.md` and `README.md` documentation
 - Test with various feature descriptions and tech stacks
 
-### Quality Assurance
-- Test SDD workflow with sample specifications
-- Verify all commands have proper YAML structure
-- Ensure generated templates are valid and complete
-- Check Git integration works correctly
+### Plugin Development
 
-## Environment Variables
+**Command Structure Requirements:**
+```yaml
+---
+description: Brief description of command purpose
+shortcut: sdd.command_name
+---
+```
 
-No specific environment variables are required for the marketplace plugin. All functionality is handled through Claude Code's built-in capabilities and the SDD slash commands.
+**Validation Checklist:**
+- ✅ All commands have valid YAML frontmatter
+- ✅ Plugin manifest includes `"commands": "./commands"`
+- ✅ No unsupported keys in manifest files
+- ✅ Command files follow consistent formatting
+- ✅ Documentation matches implementation
 
-## File Dependencies
+**Testing Procedures:**
+- Test complete SDD workflow with sample specifications
+- Verify plugin installs and loads without errors
+- Check Git integration functionality
+- Validate generated output formats and structures
 
-The skill depends on these external tools:
-- Git (for branch management and version control)
-- Claude Code 2.0.37+ (for slash commands and integration)
-- GitHub Spec Kit methodology (for specification framework principles)
+## Installation & Usage
+
+**Installation:**
+```bash
+claude plugin marketplace add https://github.com/tlemaire/thierry-lemaire-marketplace
+claude plugin install sdd@thierry-lemaire-marketplace
+```
+
+**Quick Start:**
+```bash
+/sdd.help                                    # Show comprehensive help
+/sdd.constitution "KISS principles, React"  # Set project principles
+/sdd.specify "Add user authentication"       # Create specification
+/sdd.plan "React, TypeScript, Node.js"       # Technical planning
+/sdd.tasks                                   # Generate task list
+/sdd.implement                               # Execute implementation
+```
+
+## Dependencies
+
+**Required Tools:**
+- **Git**: For branch management and version control
+- **Claude Code 2.0.37+**: For slash commands and plugin integration
+
+**Methodology Foundation:**
+- **Spec-Driven Development**: Structured development workflow
+- **GitHub Spec Kit Principles**: Quality-first specification methodology
