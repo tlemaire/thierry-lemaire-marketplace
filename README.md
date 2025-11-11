@@ -41,6 +41,7 @@ claude plugin install sdd@thierry-lemaire-marketplace
 
 ## Quick Start
 
+### For Your Project:
 ```bash
 # Start a new project with SDD
 /sdd.constitution "Follow KISS principles, use React, TypeScript, Node.js"
@@ -50,12 +51,27 @@ claude plugin install sdd@thierry-lemaire-marketplace
 /sdd.implement
 ```
 
+### Based on Project Complexity:
+```bash
+# Simple project (Hello World level)
+/sdd.constitution "Simple, no dependencies, fast loading"
+/sdd.specify "Create a landing page for my project"
+
+# Professional project (Portfolio level)
+/sdd.constitution "Professional presentation, SEO optimized, mobile-first"
+/sdd.specify "Build a portfolio showcasing my React and Node.js projects"
+
+# Team project (Kanban level)
+/sdd.constitution "Real-time collaboration, enterprise security, scalability"
+/sdd.specify "Build a collaborative project management tool with Kanban board"
+```
+
 ## What SDD Generates
 
 **Project Structure Created:**
 ```
 specs/
-├── 004-user-authentication/
+├── XXX-feature-name/
 │   ├── spec.md              # Functional specification with user stories
 │   ├── plan.md              # Technical implementation plan
 │   ├── tasks.md             # 25 dependency-organized tasks
@@ -66,6 +82,42 @@ CONSTITUTION.md              # Project principles and standards
 .env.example                # Environment variables template
 Makefile                    # Development automation commands
 ```
+
+## 📚 Learn SDD with Sample Projects
+
+Explore the SDD plugin with 4 different complexity levels:
+
+### 🟢 **Hello World** - Beginner Level
+- **Time**: 1 hour
+- **Perfect for**: Learning SDD basics, simple projects
+- **See**: `samples/hello-world/` - Static HTML/CSS implementation
+
+### 🟡 **Portfolio Website** - Intermediate Level
+- **Time**: 2-4 weeks
+- **Perfect for**: Personal projects, freelancers, web developers
+- **See**: `samples/portfolio/` - Professional portfolio with SEO
+
+### 🔴 **Kanban Board** - Advanced Level
+- **Time**: 6-8 weeks
+- **Perfect for**: Teams, enterprise applications, complex systems
+- **See**: `samples/kanban/` - Real-time collaboration system
+
+### 🔵 **Authentication System** - Reference
+- **Complexity**: Complete feature demonstration
+- **See**: `samples/authentication/` - Full SDD capability showcase
+
+```bash
+# Explore samples
+/sdd.help
+
+# Try simple example
+/sdd.constitution "Simple, fast loading, no dependencies"
+/sdd.specify "Create a simple landing page"
+/sdd.plan "HTML5, CSS3, vanilla JavaScript"
+/sdd.tasks
+```
+
+**Complete Documentation**: [samples/README.md](sdd/samples/README.md) - Guide to all samples and complexity progression
 
 ## Key Principles
 

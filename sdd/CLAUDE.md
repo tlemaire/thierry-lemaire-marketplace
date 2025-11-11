@@ -191,6 +191,40 @@ claude plugin install sdd@thierry-lemaire-marketplace
 /sdd.implement                               # Execute implementation
 ```
 
+## Sample Projects Reference
+
+**Explore SDD capabilities with different complexity levels:**
+
+### 🟢 **Beginner Examples** (Hello World Level)
+```bash
+/sdd.constitution "Simple, no dependencies, fast loading"
+/sdd.specify "Create a simple landing page"
+/sdd.plan "HTML5, CSS3, vanilla JavaScript"
+# Generates: 3 simple files, 5 tasks, 1 hour total
+```
+
+### 🟡 **Intermediate Examples** (Portfolio Level)
+```bash
+/sdd.constitution "Professional presentation, SEO optimized, mobile-first"
+/sdd.specify "Build a portfolio showcasing my skills and projects"
+/sdd.plan "Static site with modern web technologies"
+# Generates: Professional site plans, 25 tasks, 2-4 weeks
+```
+
+### 🔴 **Advanced Examples** (Kanban Level)
+```bash
+/sdd.constitution "Real-time collaboration, enterprise security, scalability"
+/sdd.specify "Build collaborative kanban system with team features"
+/sdd.plan "React, TypeScript, Node.js, PostgreSQL, Socket.IO"
+# Generates: Enterprise plans, 25 tasks, 6-8 weeks
+```
+
+**Sample Directory Reference**: `samples/` directory contains complete examples for all complexity levels:
+- `samples/hello-world/` - Static HTML/CSS implementation
+- `samples/portfolio/` - Professional portfolio with SEO
+- `samples/kanban/` - Real-time collaboration system
+- `samples/authentication/` - Full feature demonstration
+
 ## Dependencies
 
 **Required Tools:**
