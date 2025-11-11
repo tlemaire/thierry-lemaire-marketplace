@@ -121,15 +121,51 @@ Makefile                    # Development automation (15+ commands)
 
 ## Sample Outputs
 
-Explore the `samples/` directory to see complete examples of SDD-generated files:
+Explore the `samples/` directory to see complete examples of SDD-generated files organized by complexity:
 
-- **[CONSTITUTION.md](samples/CONSTITUTION.md)** - Project principles with KISS/YAGNI guidelines
-- **[SPECIFICATION.md](samples/SPECIFICATION.md)** - User authentication system requirements
-- **[IMPLEMENTATION_PLAN.md](samples/IMPLEMENTATION_PLAN.md)** - Technical architecture and API design
-- **[TASK_LIST.md](samples/TASK_LIST.md)** - 25 implementation tasks with detailed breakdown
-- **[.env.example](samples/.env.example)** - Complete environment variables template
-- **[Makefile](samples/Makefile)** - Development automation with 25+ commands
-- **[samples/README.md](samples/README.md)** - Guide to all sample files and usage
+### 🟢 **Beginner Level** - Hello World
+- **Directory**: `samples/hello-world/`
+- **Perfect for**: Learning SDD, simple projects, beginners
+- **Time**: 1 hour total
+- **Technology**: HTML5, CSS3, vanilla JavaScript
+
+### 🟡 **Intermediate Level** - Portfolio Website
+- **Directory**: `samples/portfolio/`
+- **Perfect for**: Personal projects, freelancers, web developers
+- **Time**: 2-4 weeks development
+- **Technology**: Static site with modern web technologies
+
+### 🔴 **Advanced Level** - Kanban Board
+- **Directory**: `samples/kanban/`
+- **Perfect for**: Teams, enterprise applications, complex systems
+- **Time**: 6-8 weeks development
+- **Technology**: Full-stack with real-time collaboration
+
+### 🔵 **Reference** - Authentication System
+- **Directory**: `samples/authentication/`
+- **Complete Example**: Full SDD capability demonstration
+- **Includes**: Environment setup, automation, security
+
+### Complete Documentation
+- **[samples/README.md](samples/README.md)** - Guide to all sample files and complexity levels
+- **[samples/authentication/](samples/authentication/)** - 7 files showing complete SDD output
+- **Individual READMEs**: Each sample has its own guide and context
+
+## Choosing Your Sample
+
+```bash
+# Simple Project (Hello World)
+/sdd.constitution "Simple, no dependencies, fast loading"
+
+# Professional Project (Portfolio)
+/sdd.constitution "Professional, SEO optimized, mobile-first"
+
+# Complex Team Project (Kanban)
+/sdd.constitution "Scalable, real-time collaboration, enterprise security"
+
+# Full Feature Set (Authentication)
+/sdd.constitution "Complete authentication with all security features"
+```
 
 ## Version
 
