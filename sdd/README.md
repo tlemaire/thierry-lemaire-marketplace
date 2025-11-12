@@ -4,7 +4,7 @@ Transform ideas into structured specifications and executable code through a sys
 
 ## What is SDD?
 
-**SDD (Spec-Driven Development)** is a systematic methodology that transforms ideas into structured specifications and executable code through a standardized workflow. Inspired by GitHub Spec Kit principles, SDD emphasizes clear requirements, traceability, and quality by design.
+**SDD (Spec-Driven Development)** is a systematic methodology that transforms ideas into structured specifications and executable code through a standardized workflow. Fully compliant with GitHub Spec Kit principles, SDD enhances the specification-driven approach with improved memory management and usability features.
 
 ### Core Philosophy
 - **Specification First**: Define WHAT and WHY before HOW
@@ -12,6 +12,7 @@ Transform ideas into structured specifications and executable code through a sys
 - **Quality by Design**: Built-in checklists and consistency analysis
 - **Traceability**: Direct links from requirements to implementation
 - **Anti-Abstraction**: Use frameworks directly without unnecessary layers
+- **Enhanced Memory**: Transparent, distributed context management for teams
 
 ## Why Use SDD?
 
@@ -32,6 +33,78 @@ Transform ideas into structured specifications and executable code through a sys
 - 🔒 **Quality Assurance**: Built-in checklists and validation
 - 📈 **Scalability**: Methodology scales from simple to complex projects
 - 💰 **Efficiency**: Reduced rework and miscommunication
+
+## GitHub Spec Kit Compliance
+
+✅ **Fully Compliant** with GitHub Spec Kit principles and methodology.
+
+### Compliance Overview
+- **Workflow Alignment**: 100% adherence to Spec Kit's specification-driven development process
+- **Executable Specifications**: Rich, detailed specifications that drive implementation
+- **Quality Gates**: Enhanced validation and consistency analysis
+- **Intent-Driven Development**: Clear separation of requirements from implementation
+
+### Key Differences & Enhancements
+- **Command Naming**: `/sdd.*` instead of `/speckit.*` (enhanced usability)
+- **Memory Management**: Distributed file-based approach vs `.specify/memory/` directory
+- **Additional Commands**: Clarify, Checklist, Analyze, and Help for enhanced workflow
+- **Progressive Samples**: Complexity-organized learning examples
+
+> **Note**: These differences enhance the Spec Kit experience while maintaining full compliance with core principles. For detailed compliance analysis, see [SPEC_KIT_COMPLIANCE.md](../SPEC_KIT_COMPLIANCE.md).
+
+## Enhanced Memory Approach
+
+SDD implements a superior memory management system compared to traditional `.specify/memory/` approaches.
+
+### What is "Memory" in Spec-Driven Development?
+Memory refers to **persistent context storage** that maintains project knowledge, decisions, and patterns across development sessions. It ensures consistency and enables the AI to learn from previous work.
+
+### SDD's Distributed Memory System
+
+#### 🏛️ **Project Memory** (Constitution)
+```
+CONSTITUTION.md              # Project principles and standards
+docs/constitution.md         # Alternative documentation location
+.claude/constitution.md      # Claude-specific configuration
+```
+
+#### 📋 **Feature Memory** (Specifications)
+```
+specs/XXX-feature-name/
+├── spec.md              # Feature requirements and user stories
+├── plan.md              # Technical decisions and architecture
+├── tasks.md             # Implementation roadmap and dependencies
+├── research.md          # Technical research and findings
+└── data-model.md        # Data architecture and schemas
+```
+
+#### ✅ **Quality Memory** (Checklists)
+```
+specs/XXX-feature-name/checklists/
+├── code-review.md       # Review standards and criteria
+├── testing.md          # Testing requirements and coverage
+├── documentation.md    # Documentation standards and templates
+└── security.md         # Security practices and validation
+```
+
+### Advantages Over Traditional Memory
+
+| Traditional (.specify/memory/) | SDD Enhanced Memory |
+|--------------------------------|---------------------|
+| ❌ Hidden directory structure | ✅ Visible, discoverable files |
+| ❌ Single large memory file | ✅ Distributed by feature/type |
+| ❌ Hard to version control | ✅ Git-friendly, trackable changes |
+| ❌ AI-centric format | ✅ Human-readable markdown |
+| ❌ Limited scalability | ✅ Grows with project complexity |
+
+### Memory Persistence Benefits
+
+1. **🔍 Discoverability**: All project knowledge is visible and searchable
+2. **👥 Team Collaboration**: Memory files work seamlessly with version control
+3. **📈 Scalability**: Organized structure grows cleanly with project size
+4. **🔄 Continuity**: Context preserved across sessions and team members
+5. **📚 Learning**: Accumulated knowledge becomes project documentation
+6. **🛠️ Maintainability**: Easy to update and evolve memory over time
 
 ## How to Use SDD
 
@@ -147,17 +220,21 @@ Makefile                    # Development automation (15+ commands)
 
 ## Features
 
+- **GitHub Spec Kit Compliance**: Full adherence to specification-driven development principles
+- **Enhanced Memory System**: Distributed, visible, and Git-friendly context management
 - **KISS & YAGNI Principles**: Built-in guidance for simple code
 - **Environment Management**: Automatic .env.example and Makefile generation
 - **25-Task Breakdown**: Dependency-organized implementation tasks
 - **Quality Gates**: Built-in checklists and consistency analysis
 - **Git Integration**: Automatic branch creation and management
 - **Traceability**: Clear links from requirements to implementation
+- **Progressive Learning**: Complexity-organized samples for skill development
 
 ## Documentation
 
 - [Complete Guide](SDD.md) - Full methodology documentation
 - [Developer Guide](CLAUDE.md) - Claude-specific guidance and development
+- [Spec Kit Compliance](../SPEC_KIT_COMPLIANCE.md) - Detailed compliance analysis and comparison
 - [Sample Outputs](samples/) - Example SDD-generated files and workflows
 
 ## Samples
