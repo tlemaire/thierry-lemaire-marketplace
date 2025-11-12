@@ -1,4 +1,4 @@
-# Thierry Lemaire Marketplace
+# Marketplace
 
 Claude Code plugins and skills by Thierry Lemaire.
 
@@ -10,8 +10,8 @@ Transform ideas into structured specifications and executable code through a sys
 
 **Get Started**:
 ```bash
-claude plugin marketplace add https://github.com/tlemaire/thierry-lemaire-marketplace
-claude plugin install sdd@thierry-lemaire-marketplace
+claude plugin marketplace add https://github.com/tlemaire/marketplace
+claude plugin install sdd@marketplace
 ```
 
 **Documentation**: See [sdd/README.md](sdd/README.md) for details and usage.
@@ -20,10 +20,10 @@ claude plugin install sdd@thierry-lemaire-marketplace
 
 ```bash
 # Add marketplace
-claude plugin marketplace add https://github.com/tlemaire/thierry-lemaire-marketplace
+claude plugin marketplace add https://github.com/tlemaire/marketplace
 
 # Install plugin
-claude plugin install sdd@thierry-lemaire-marketplace
+claude plugin install sdd@marketplace
 
 # List installed plugins
 claude plugin list
