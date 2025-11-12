@@ -35,10 +35,8 @@ Generate intelligent commit messages based on staged changes, automatically upda
    - Check if CHANGELOG.md exists in project root
    - Create CHANGELOG.md in root if it doesn't exist with proper structure
    - Parse existing changelog structure
-   - Determine next version number (1.0.0 → 1.0.1 for fixes, 1.0.0 → 1.1.0 for features)
-   - Create new version section with today's date
-   - Add changes to the new version section
-   - Format changes according to Keep a Changelog standard
+   - Add new entry under "Unreleased" section
+   - Format changes according to Keep a Changelog v1.1.0 standard
    - Maintain chronological order
 
 5. **Execute commit automatically**:
@@ -173,21 +171,22 @@ Co-Authored-By: Claude <noreply@anthropic.com>"
 2. **Analyze changes**: Categorize and generate commit message
 3. **Update changelog** (if applicable):
    - Add entries to CHANGELOG.md in root
-   - Determine version bump based on change types (patch/minor/major)
-   - Create new version section with today's date
-   - Add changes to the new version section
+   - Add new entry under "Unreleased" section
+   - Format changes according to Keep a Changelog v1.1.0 standard
+   - Maintain chronological order
 4. **Create changelog** (if missing): Create CHANGELOG.md in root with proper structure
 5. **Re-stage changelog** (if updated): `git add CHANGELOG.md`
 6. **Execute commit**: Run git commit with generated message + attribution
 7. **Verify success**: Check git status to confirm commit
 
-### Version Bump Logic
+### Version Management (Keep a Changelog v1.1.0)
 
+- **Unreleased Section**: Track upcoming changes before version release
+- **Manual Version Creation**: Convert [Unreleased] to version when ready for release
 - **Patch version (1.2.0 → 1.2.1)**: Bug fixes, documentation updates
 - **Minor version (1.2.0 → 1.3.0)**: New features, improvements
 - **Major version (1.2.0 → 2.0.0)**: Breaking changes
-- **Auto-detection**: Analyze commit types to determine appropriate bump
-- **Direct Version Creation**: Each commit creates a new version section immediately
+- **Standard Compliance**: Follow Keep a Changelog v1.1.0 format exactly
 
 ### Error Handling
 
