@@ -22,7 +22,10 @@ claude plugin install sdd@marketplace
 /sdd.help
 ```
 
-**📚 Documentation**: See [sdd/README.md](sdd/README.md) for complete details and usage examples.
+**📚 Documentation**:
+- See [sdd/README.md](sdd/README.md) for complete details and usage examples
+- View [sdd/SPEC_KIT_COMPLIANCE.md](sdd/SPEC_KIT_COMPLIANCE.md) for comprehensive GitHub Spec Kit compliance analysis (100% ✅)
+- Explore [sdd/samples/](sdd/samples/) directory for example projects by complexity level
 
 ### 🤖 SmartCommit
 
@@ -148,6 +151,7 @@ All plugins in this marketplace are licensed under **MIT License**.
 
 - **📋 Changelog**: [CHANGELOG.md](CHANGELOG.md) - Version history and release notes
 - **🧠 SDD Plugin**: [sdd/README.md](sdd/README.md) - Complete SDD documentation
+- **📊 Spec Kit Compliance**: [sdd/SPEC_KIT_COMPLIANCE.md](sdd/SPEC_KIT_COMPLIANCE.md) - GitHub Spec Kit compliance analysis (100% ✅)
 - **🤖 SmartCommit Plugin**: [smartcommit/README.md](smartcommit/README.md) - Complete SmartCommit documentation
 - **⭐ GitHub**: [tlemaire/marketplace](https://github.com/tlemaire/marketplace) - Source repository
 
