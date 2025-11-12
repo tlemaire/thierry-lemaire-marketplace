@@ -7,6 +7,8 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## [Unreleased]
 
+## [1.3.2] - 2025-11-12
+
 ### ✅ Fixed
 - **Version Date Corrections**: Fixed inconsistent version dates across marketplace releases for logical progression
 - **Documentation Links**: Added proper anchor link {#sdd-plugin} for cross-reference functionality
