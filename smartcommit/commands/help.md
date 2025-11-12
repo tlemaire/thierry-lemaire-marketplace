@@ -50,15 +50,8 @@ SmartCommit automatically creates CHANGELOG.md in project root if it doesn't exi
 
 ```markdown
 # Changelog
-## [Unreleased]
 
-### Added
-- User authentication system with OAuth2 support
-
-### Fixed
-- Login validation issues on mobile devices
-
-## [1.3.0] - 2025-11-12  # Automatically created when [Unreleased] has content
+## [1.3.0] - 2025-11-12  # Automatically created on each commit
 
 ### Added
 - User authentication system with OAuth2 support

@@ -35,11 +35,9 @@ Generate intelligent commit messages based on staged changes, automatically upda
    - Check if CHANGELOG.md exists in project root
    - Create CHANGELOG.md in root if it doesn't exist with proper structure
    - Parse existing changelog structure
-   - If [Unreleased] section has content, create a new version release:
-     * Determine next version number (1.0.0 → 1.0.1 for fixes, 1.0.0 → 1.1.0 for features)
-     * Convert [Unreleased] to version with today's date
-     * Create new empty [Unreleased] section for future changes
-   - If no [Unreleased] content, add entry to existing version or create new version
+   - Determine next version number (1.0.0 → 1.0.1 for fixes, 1.0.0 → 1.1.0 for features)
+   - Create new version section with today's date
+   - Add changes to the new version section
    - Format changes according to Keep a Changelog standard
    - Maintain chronological order
 
@@ -175,10 +173,9 @@ Co-Authored-By: Claude <noreply@anthropic.com>"
 2. **Analyze changes**: Categorize and generate commit message
 3. **Update changelog** (if applicable):
    - Add entries to CHANGELOG.md in root
-   - If [Unreleased] has content, create new version release
    - Determine version bump based on change types (patch/minor/major)
-   - Convert [Unreleased] to versioned release with today's date
-   - Create new empty [Unreleased] section
+   - Create new version section with today's date
+   - Add changes to the new version section
 4. **Create changelog** (if missing): Create CHANGELOG.md in root with proper structure
 5. **Re-stage changelog** (if updated): `git add CHANGELOG.md`
 6. **Execute commit**: Run git commit with generated message + attribution
@@ -190,6 +187,7 @@ Co-Authored-By: Claude <noreply@anthropic.com>"
 - **Minor version (1.2.0 → 1.3.0)**: New features, improvements
 - **Major version (1.2.0 → 2.0.0)**: Breaking changes
 - **Auto-detection**: Analyze commit types to determine appropriate bump
+- **Direct Version Creation**: Each commit creates a new version section immediately
 
 ### Error Handling
 
