@@ -8,6 +8,12 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 ## [Unreleased]
 
 ### 🆕 Added
+- **SmartCommit Version Management**: Automatic version release creation with semantic version bump logic
+- **Intelligent Version Bumping**: Patch for fixes, minor for features, major for breaking changes
+
+## [1.3.0] - 2025-11-12
+
+### 🆕 Added
 - **Marketplace README Enhancement**: Comprehensive marketplace guide with professional presentation and complete plugin information
 
 ### 🔄 Changed
