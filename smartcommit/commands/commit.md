@@ -1,237 +1,374 @@
 ---
-description: Generate intelligent commit messages, update changelog if needed, and execute the commit automatically
+description: Complete git workflow - commit changes, manage changelog, create releases automatically
 shortcut: smartcommit.commit
 ---
 
 # Smart Commit Command
 
-Generate intelligent commit messages based on staged changes, automatically update changelog when necessary, and execute the commit immediately.
+**Complete git workflow in one command** - intelligently commits changes, manages changelog, and creates releases automatically based on your development context.
 
-## What to do:
+## What it does automatically:
 
-1. **Analyze git status and staged changes**:
-   - Check current git status
-   - Identify added, modified, and deleted files
-   - Parse file changes to understand the impact
-   - Detect change patterns and categorize by type
+### 🔄 **Development Mode** (Default)
+When you have staged changes:
+1. **Analyze changes** - Categorize by type and impact
+2. **Generate commit message** - Follow conventional commit format
+3. **Update changelog** - Add entries to [Unreleased] section
+4. **Execute commit** - Commit with attribution
 
-2. **Categorize changes intelligently**:
-   - **Features**: New functionality, feature additions, API changes
-   - **Improvements**: Code enhancements, refactoring, performance improvements
-   - **Bug Fixes**: Error corrections, issue resolutions, patches
-   - **Documentation**: README, docs, comments, examples
-   - **Testing**: Test additions, test improvements, test fixes
-   - **Configuration**: Build tools, CI/CD, dependencies, environment
-   - **Breaking Changes**: Major API changes, backward compatibility issues
+### 🚀 **Release Mode** (Auto-detected)
+When working tree is clean but [Unreleased] has entries:
+1. **Analyze [Unreleased]** - Check for version-worthy changes
+2. **Determine version bump** - Auto semantic versioning (major/minor/patch)
+3. **Create version** - Move [Unreleased] entries to versioned section
+4. **Generate git tag** - Create version tag automatically
+5. **Push ready** - Provide git push instructions
 
-3. **Generate commit message**:
-   - Follow conventional commit format: `<type>[optional scope]: <description>`
-   - Create descriptive, concise summary (50-72 characters)
-   - Include relevant scope (affected module/component)
-   - Add detailed body when changes are complex
-   - Include issue references when detected
-
-4. **Update global changelog if necessary**:
-   - Check if CHANGELOG.md exists in project root
-   - Create CHANGELOG.md in root if it doesn't exist with proper structure
-   - Parse existing changelog structure
-   - Add new entry under "Unreleased" section
-   - Format changes according to Keep a Changelog v1.1.0 standard
-   - Maintain chronological order
-
-5. **Execute commit automatically**:
-   - Execute git commit with the generated message immediately
-   - Include Claude Code attribution in commit footer
-   - Provide feedback on completed action
-   - Handle any commit errors gracefully
-
-## Commit Message Types
-
-```bash
-feat: Add new feature or functionality
-improve: Enhance existing code (refactor, performance)
-fix: Resolve bug or issue
-docs: Update documentation
-test: Add or modify tests
-config: Configuration or build changes
-chore: Maintenance tasks
-```
+### 📋 **Setup Mode** (First run)
+When no CHANGELOG.md exists:
+1. **Create CHANGELOG.md** - Initialize with proper structure
+2. **Setup project** - Ready for smart workflow
 
 ## Usage Examples
 
-### Basic Smart Commit
+### Development Workflow
 ```bash
-# Stage your changes
+# Make your changes...
 git add .
 
-# Generate smart commit with changelog update
+# SmartCommit handles everything:
 /smartcommit.commit
-```
 
-### Dry Run Mode
-```bash
-# Preview commit message without committing
-/smartcommit.commit --dry-run
-```
-
-### Custom Message
-```bash
-# Generate with custom message template
-/smartcommit.commit "Add user authentication system"
-```
-
-## Output Examples
-
-### Standard Commit Generation
-```bash
+# Output:
 🔍 Analyzing staged changes...
-📝 Detected 3 files modified, 2 files added
-🎯 Categorized as: 1 feature, 1 improvement, 1 documentation
-
-💡 Generated commit message:
-feat(auth): Add OAuth2 integration with GitHub providers
-
-- Implements OAuth2 flow for user authentication
-- Supports GitHub, Google, and Microsoft providers
-- Includes token refresh and session management
-- Fixes #123, addresses #456
-
-📋 CHANGELOG.md updated: Created version [1.3.0] - 2025-11-12
+📝 Detected 2 features, 1 improvement
+💬 Generated: feat(auth): Add OAuth2 integration with GitHub providers
+📋 CHANGELOG.md updated: 3 entries added to [Unreleased]
 ✅ Commit executed successfully
 ```
 
-### Dry Run Output
+### Release Workflow (Automatic)
 ```bash
-🔍 Analyzing staged changes...
-📝 Detected 2 files modified
-🎯 Categorized as: 1 bug fix, 1 documentation
+# When working tree is clean and [Unreleased] has entries:
+/smartcommit.commit
 
-💡 Proposed commit message:
-fix(ui): Resolve responsive layout issues on mobile devices
-
-- Fixes navigation menu overflow on small screens
-- Adjusts button sizing for touch interfaces
-- Improves mobile navigation experience
-
-📋 CHANGELOG.md would be updated
-🚀 Dry run - no changes made
-💡 Use without --dry-run to execute commit
+# Output:
+🚀 Release mode detected - working tree clean, [Unreleased] has entries
+🔍 Analyzing [Unreleased] entries...
+📝 Found 2 features, 1 fix, 0 breaking changes
+🎯 Version bump: minor (1.2.1 → 1.3.0)
+📋 Created version [1.3.0] - 2025-11-14
+🏷️  Git tag created: v1.3.0
+✅ Release ready! Run: git push origin v1.3.0
 ```
 
-### Error Handling
+### Force Specific Actions
 ```bash
-❌ No staged changes found. Please stage files first:
-   git add <files>
+# Force commit mode (even with clean working tree)
+/smartcommit.commit --force-commit
 
-⚠️  Large files detected (>1MB), skipping detailed analysis
-💡 Proceeding with basic change categorization
+# Force release mode (create release even with staged changes)
+/smartcommit.commit --force-release
+
+# Preview what would happen
+/smartcommit.commit --dry-run
+
+# Use custom message
+/smartcommit.commit "Add comprehensive user authentication system"
 ```
 
-## Changelog Integration
+## Command Options
 
-The Smart Commit command automatically creates and updates a global CHANGELOG.md when:
+### Standard Usage
+```bash
+/smartcommit.commit
+```
+- **Auto-detects mode** based on git state and changelog content
+- **Development mode** if staged changes exist
+- **Release mode** if clean tree + [Unreleased] entries
+- **Setup mode** if no CHANGELOG.md exists
 
-1. **Changes are significant** (features, improvements, or important fixes)
-2. **CHANGELOG.md is created in project root** if it doesn't exist
-3. **Changelog follows Keep a Changelog format** with proper structure
+### Mode Control
+```bash
+/smartcommit.commit --mode=commit      # Force commit mode
+/smartcommit.commit --mode=release     # Force release mode
+/smartcommit.commit --mode=setup       # Force setup mode
+```
 
-### Changelog Format
+### Preview Mode
+```bash
+/smartcommit.commit --dry-run
+```
+- Analyzes without making changes
+- Shows what would be done
+- Safe for experimentation
+
+### Version Control (Release Mode)
+```bash
+/smartcommit.commit --version=2.0.0    # Force specific version
+/smartcommit.commit --type=major       # Force major version bump
+/smartcommit.commit --type=minor       # Force minor version bump
+/smartcommit.commit --type=patch       # Force patch version bump
+```
+
+### Custom Messages
+```bash
+/smartcommit.commit "Custom commit message"
+```
+- Uses your message instead of generated one
+- Still analyzes changes for changelog entries
+- Maintains all other automatic behavior
+
+## Smart Mode Detection Logic
+
+### Development Mode Conditions
+```bash
+# Any of these trigger Development Mode:
+✅ Staged changes exist
+✅ --force-commit flag used
+✅ --mode=commit specified
+✅ No CHANGELOG.md (triggers Setup Mode first)
+```
+
+### Release Mode Conditions
+```bash
+# All of these required for Release Mode:
+✅ Working tree clean (no staged changes)
+✅ CHANGELOG.md exists
+✅ [Unreleased] section has entries
+✅ No --force-commit flag
+```
+
+### Setup Mode Conditions
+```bash
+# Triggers when:
+✅ No CHANGELOG.md in project root
+✅ Any mode selected (will setup first, then execute)
+```
+
+## Automatic Version Management
+
+### Semantic Versioning Logic
+```bash
+# Breaking Changes → Major Version
+### 💥 Breaking Changes
+- Remove deprecated API endpoints
+# Output: v2.0.0 (1.3.0 → 2.0.0)
+
+# Features → Minor Version
+### 🆕 Added / ### 🔄 Changed
+- User authentication system
+- Performance optimizations
+# Output: v1.4.0 (1.3.0 → 1.4.0)
+
+# Fixes → Patch Version
+### ✅ Fixed / ### 📚 Documentation
+- Login validation issues
+- Documentation updates
+# Output: v1.3.1 (1.3.0 → 1.3.1)
+```
+
+### Changelog Format (Keep a Changelog v1.1.0)
 ```markdown
-# Changelog
-
-All notable changes to this project will be documented in this file.
+# 📋 Changelog
 
 ## [Unreleased]
 
-### Added
-- New feature description here
+### 🆕 Added
+- User authentication system with OAuth2 support
 
-### Fixed
-- Bug fix description here
+### ✅ Fixed
+- Login validation issues on mobile devices
+
+## [1.3.0] - 2025-11-14
+
+### 🆕 Added
+- User authentication system with OAuth2 support
+
+### ✅ Fixed
+- Login validation issues on mobile devices
 ```
 
-## Implementation
+## Complete Workflow Examples
 
-### Commit Execution Steps
-
-After analyzing changes and updating changelog (if necessary), immediately execute:
-
+### New Feature Development
 ```bash
-# Execute the commit with the generated message
-git commit -m "generated-commit-message
+# 1. Implement feature
+# ... (development work)
 
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
+# 2. Stage and commit
+git add .
+/smartcommit.commit
+# Output: "feat(auth): Add OAuth2 integration with GitHub providers"
+# Result: Changes added to [Unreleased] section
 
-Co-Authored-By: Claude <noreply@anthropic.com>"
+# 3. Later, when ready to release:
+/smartcommit.commit
+# Output: "✅ Version [1.4.0] - 2025-11-14 created, git tag v1.4.0 created"
 ```
 
-### Required Execution Order
+### Bug Fix Process
+```bash
+# 1. Fix bug and commit
+git add .
+/smartcommit.commit
+# Output: "fix(ui): Resolve responsive layout issues on mobile devices"
+# Result: Fix added to [Unreleased] section
 
-1. **Stage all changes**: Ensure all modifications are staged
-2. **Analyze changes**: Categorize and generate commit message
-3. **Update changelog** (if applicable):
-   - Add entries to CHANGELOG.md in root
-   - Add new entry under "Unreleased" section
-   - Format changes according to Keep a Changelog v1.1.0 standard
-   - Maintain chronological order
-4. **Create changelog** (if missing): Create CHANGELOG.md in root with proper structure
-5. **Re-stage changelog** (if updated): `git add CHANGELOG.md`
-6. **Execute commit**: Run git commit with generated message + attribution
-7. **Verify success**: Check git status to confirm commit
+# 2. Create patch release
+/smartcommit.commit
+# Output: "✅ Version [1.3.1] - 2025-11-14 created, git tag v1.3.1 created"
+```
 
-### Version Management (Keep a Changelog v1.1.0)
+### Major Release Process
+```bash
+# 1. Make breaking changes
+git add .
+/smartcommit.commit "feat!: Refactor authentication API (breaking change)"
+# Result: Breaking change added to [Unreleased] section
 
-- **Unreleased Section**: Track upcoming changes before version release
-- **Manual Version Creation**: Convert [Unreleased] to version when ready for release
-- **Patch version (1.2.0 → 1.2.1)**: Bug fixes, documentation updates
-- **Minor version (1.2.0 → 1.3.0)**: New features, improvements
-- **Major version (1.2.0 → 2.0.0)**: Breaking changes
-- **Standard Compliance**: Follow Keep a Changelog v1.1.0 format exactly
+# 2. Create major release
+/smartcommit.commit
+# Output: "✅ Version [2.0.0] - 2025-11-14 created, git tag v2.0.0 created"
+```
 
-### Error Handling
+## Error Handling
 
-- **No staged changes**: Guide user to stage files first
-- **Commit failure**: Show git error and suggest resolution
-- **Changelog update failure**: Continue with commit but warn user
+### No Changes to Process
+```bash
+❌ No staged changes found and [Unreleased] section is empty
+💡 Make changes first, or use:
+   git add <files>
+   /smartcommit.commit
+
+📋 Nothing to commit or release
+```
+
+### Mixed State (Staged + [Unreleased])
+```bash
+⚠️  Both staged changes AND [Unreleased] entries exist
+💡 Choose action:
+
+# Commit first, then release:
+/smartcommit.commit    # Commits staged changes
+/smartcommit.commit    # Creates release
+
+# Or force release immediately:
+/smartcommit.commit --force-release
+```
+
+### Invalid Version Format
+```bash
+⚠️  Invalid version format detected: "v1.3.0"
+💡 Correcting to standard format: "1.3.0"
+
+📋 Semantic versioning: X.Y.Z where X=major, Y=minor, Z=patch
+```
+
+## Git Integration
+
+### Automatic Tagging
+```bash
+# Release mode automatically creates:
+git tag v1.3.0
+git push origin v1.3.0  # You run this manually
+
+# List all version tags:
+git tag --list "v*"
+```
+
+### Version History
+```bash
+# Show release history:
+git tag --sort=-version:refname
+
+# Show commits since last release:
+git log v1.2.0..HEAD --oneline
+```
 
 ## Configuration
 
-### Simple Configuration (smartcommit.json)
+### Zero Configuration Required
+SmartCommit works out of the box! Just run `/smartcommit.commit`.
+
+### Optional Configuration (smartcommit.json)
 ```json
 {
-  "commitTypes": {
-    "feat": "Features",
-    "improve": "Improvements",
-    "fix": "Bug Fixes",
-    "docs": "Documentation",
-    "test": "Testing",
-    "config": "Configuration",
-    "chore": "Maintenance"
+  "commit": {
+    "autoRelease": true,
+    "createTags": true,
+    "pushInstructions": true
+  },
+  "versioning": {
+    "scheme": "semver",
+    "prefix": "v",
+    "dateFormat": "YYYY-MM-DD"
   },
   "changelog": {
     "file": "CHANGELOG.md",
-    "updateAutomatically": true
+    "format": "keepachangelog"
   }
 }
 ```
 
 ## Best Practices
 
-### Before Committing
-- Ensure changes are properly staged
-- Review generated commit message
-- Check changelog formatting if applicable
-- Verify commit message clarity and accuracy
-
-### Commit Message Standards
-- Use conventional commit format
-- Keep summary under 72 characters
-- Use imperative mood ("Add" not "Added")
-- Include scope when relevant
+### Before Running SmartCommit
+- **Review changes** - Ensure staged changes are correct
+- **Working tree** - Usually commit changes before releasing
+- **[Unreleased] section** - Check it looks accurate for release
 
 ### Team Collaboration
-- Establish commit type conventions
-- Share changelog format standards
-- Use consistent issue reference format
+- **Conventional commits** - Let SmartCommit generate proper format
+- **Semantic versioning** - Trust automatic version detection
+- **Release coordination** - Use `--dry-run` to preview releases
 
-Focus on providing developers with intelligent, automated commit message generation that maintains consistency across projects while automatically updating changelogs when appropriate.
+### Git Workflow Integration
+- **Feature branches** - SmartCommit works on any branch
+- **Main branch releases** - Releases typically from main/master
+- **Tag management** - SmartCommit creates tags, you push them
+
+## Troubleshooting
+
+### Common Issues
+
+#### Mixed State Confusion
+```bash
+⚠️  Both staged changes and [Unreleased] entries exist
+💡 SmartCommit doesn't know what to do first
+
+# Solution: Choose your priority:
+/smartcommit.commit --force-commit  # Commit first, ignore [Unreleased]
+/smartcommit.commit --force-release # Release first, ignore staged changes
+```
+
+#### Empty [Unreleased] Section
+```bash
+❌ [Unreleased] section has no entries
+💡 Add entries with commits first, or:
+   /smartcommit.commit --mode=setup  # Fresh start
+```
+
+#### Version Conflicts
+```bash
+❌ Git tag v1.3.0 already exists
+💡 Force different version:
+   /smartcommit.commit --version=1.3.1
+```
+
+### Getting Help
+```bash
+# Preview any action safely:
+/smartcommit.commit --dry-run
+
+# Show available options:
+/smartcommit.commit --help
+
+# Check current state:
+git status
+cat CHANGELOG.md | grep -A 10 "## \[Unreleased\]"
+```
+
+---
+
+**SmartCommit - Complete git workflow in one command.** Just run `/smartcommit.commit` and let it handle everything intelligently.
