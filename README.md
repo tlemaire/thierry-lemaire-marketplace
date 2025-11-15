@@ -1,8 +1,8 @@
 # 🚀 Marketplace
 
-Claude Code plugins and skills by Thierry Lemaire - enhancing your development workflow with powerful tools.
+Claude Code plugins, tools, and projects by Thierry Lemaire - enhancing your development workflow with powerful AI integrations and automation.
 
-## ✨ Available Plugins
+## ✨ Available Plugins & Projects
 
 ### 🧠 SDD - Spec-Driven Development
 
@@ -46,6 +46,40 @@ git add .
 ```
 
 **📚 Documentation**: See [smartcommit/README.md](smartcommit/README.md) for complete details and usage examples.
+
+### 🌐 Claude Proxy - Multi-Provider AI Integration
+
+Production-ready proxy server enabling Claude Code to work with multiple AI providers including GLM 4.6, vLLM, Ollama, and OpenAI.
+
+**🔥 Key Features:**
+- **GLM 4.6 Integration**: Direct Z.AI support with 10% discount subscription
+- **Multi-Provider Architecture**: Support for vLLM, Ollama, OpenAI, and GLM providers
+- **Anthropic API Compatible**: Drop-in replacement with full Claude Code compatibility
+- **Production Ready**: TypeScript, Express.js, performance monitoring, error handling
+- **High Performance**: Optimized for 4x H100 GPU setups with streaming support
+
+**⚡ GLM 4.6 Quick Start**:
+```bash
+# Direct GLM 4.6 integration (recommended)
+export ANTHROPIC_AUTH_TOKEN=your_zai_api_key
+export ANTHROPIC_BASE_URL=https://api.z.ai/api/anthropic
+
+# Get GLM 4.6 access: https://z.ai/subscribe?ic=9KB0OPJIMF
+# Plans start at $3/month with 10% discount via invite link
+```
+
+**⚡ Proxy Server Quick Start**:
+```bash
+cd claude-proxy
+npm install
+npm run dev
+
+# Configure Claude Code
+export ANTHROPIC_API_URL=http://localhost:3000/v1
+export ANTHROPIC_API_KEY=proxy-key
+```
+
+**📚 Documentation**: See [claude-proxy/README.md](claude-proxy/README.md) for complete setup instructions and provider configurations.
 
 ## 📋 Changelog
 
@@ -109,7 +143,7 @@ git add .
 /smartcommit.commit --dry-run
 ```
 
-## 🏗️ Plugin Structure
+## 🏗️ Plugin & Project Structure
 
 ```
 marketplace/
@@ -119,10 +153,19 @@ marketplace/
 │   ├── 📝 commands/          # 9 SDD workflow commands
 │   ├── 📚 samples/           # Example projects by complexity
 │   └── 📖 README.md          # SDD documentation
-└── 🤖 smartcommit/           # SmartCommit plugin
-    ├── 💬 commands/          # Commit generation commands
-    ├── 📚 samples/           # Usage examples and configurations
-    └── 📖 README.md          # SmartCommit documentation
+├── 🤖 smartcommit/           # SmartCommit plugin
+│   ├── 💬 commands/          # Commit generation commands
+│   ├── 📚 samples/           # Usage examples and configurations
+│   └── 📖 README.md          # SmartCommit documentation
+└── 🌐 claude-proxy/          # Multi-Provider AI Integration
+    ├── 🔧 src/               # TypeScript source code
+    │   ├── providers/        # AI provider adapters (GLM, vLLM, Ollama, OpenAI)
+    │   ├── routes/           # API route handlers
+    │   ├── types/            # TypeScript definitions
+    │   └── utils/            # Utilities and helpers
+    ├── 📝 examples/          # Setup scripts and benchmarks
+    ├── ⚙️ .env.example       # Environment configuration template
+    └── 📖 README.md          # Claude Proxy documentation
 ```
 
 ## 🤝 Contributing
@@ -153,6 +196,7 @@ All plugins in this marketplace are licensed under **MIT License**.
 - **🧠 SDD Plugin**: [sdd/README.md](sdd/README.md) - Complete SDD documentation
 - **📊 Spec Kit Compliance**: [sdd/SPEC_KIT_COMPLIANCE.md](sdd/SPEC_KIT_COMPLIANCE.md) - GitHub Spec Kit compliance analysis (100% ✅)
 - **🤖 SmartCommit Plugin**: [smartcommit/README.md](smartcommit/README.md) - Complete SmartCommit documentation
+- **🌐 Claude Proxy**: [claude-proxy/README.md](claude-proxy/README.md) - Multi-provider AI integration documentation
 - **⭐ GitHub**: [tlemaire/marketplace](https://github.com/tlemaire/marketplace) - Source repository
 
 ---
