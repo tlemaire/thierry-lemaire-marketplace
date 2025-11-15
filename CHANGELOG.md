@@ -10,6 +10,9 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 ### 🆕 Added
 - **GitHub Spec Kit Compliance Analysis**: Comprehensive SPEC_KIT_COMPLIANCE.md documentation with 100% compliance certification
 - **Professional Documentation**: Complete workflow analysis, feature comparison matrix, and compliance validation
+- **GLM 4.6 Integration**: Complete GLM 4.6 support via Z.AI with direct Claude Code compatibility
+- **Claude Proxy Infrastructure**: Full proxy server with multi-provider support (vLLM, Ollama, OpenAI, GLM)
+- **Z.AI Partnership**: Subscription integration with 10% discount offer for GLM Coding Plan
 
 ### 🔄 Changed
 - **Documentation References**: Updated README.md and SDD README.md to point to comprehensive compliance analysis
