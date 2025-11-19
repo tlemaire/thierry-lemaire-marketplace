@@ -11,13 +11,27 @@ Transform feature description into detailed functional specification with user s
 
 1. **Parse feature description** from user input
 2. **Generate feature identifier** (XXX-name format based on sequence)
-3. **Create feature directory**: `specs/XXX-feature-name/`
-4. **Initialize Git branch**: Create feature branch if in Git repository
+3. **Ensure SDD-compliant project structure**:
+   - Verify `.specify/memory/` directory exists
+   - Verify `specs/` directory structure exists
+   - Create missing directories if needed
+   - Validate project is SDD-compliant
 
-5. **Read project constitution** if available:
-   - Check `CONSTITUTION.md` in project root
-   - Check `docs/constitution.md`
-6. **Create comprehensive specification** with these sections:
+4. **Create feature directory**: `specs/XXX-feature-name/`
+5. **Initialize Git branch**: Create feature branch if in Git repository
+
+6. **Read project constitution** from SDD-enhanced memory:
+   - **Primary**: `.specify/memory/constitution.md`
+   - **Fallback**: `CONSTITUTION.md` in project root
+   - **Legacy**: `docs/constitution.md` if available
+
+7. **Create complete SDD-compliant feature structure**:
+   - Create feature-specific configuration files
+   - Initialize feature-specific documentation
+   - Set up feature-specific quality checklists
+   - Create feature-specific development automation
+
+8. **Create comprehensive specification** with these sections:
 
    ```markdown
    # Feature Specification: [Feature Name]
@@ -52,8 +66,18 @@ Transform feature description into detailed functional specification with user s
    - Each with clear acceptance criteria
 
 8. **Generate technical requirements** based on feature complexity
-9. **Create quickstart guide** in same directory: `quickstart.md`
-10. **Write specification file**: `specs/XXX-feature-name/spec.md`
+9. **Create complete SDD-compliant feature structure**:
+    - `.env.example` (feature-specific environment variables)
+    - `Makefile` (feature-specific development automation)
+    - `checklists/` directory with quality validation files:
+      - `requirements.md` (requirements validation checklist)
+      - `ux.md` (user experience testing checklist)
+      - `performance.md` (performance benchmarks)
+      - `accessibility.md` (accessibility compliance)
+      - `security.md` (security validation)
+
+10. **Create quickstart guide** in same directory: `quickstart.md`
+11. **Write specification file**: `specs/XXX-feature-name/spec.md`
 
 ## Git Integration:
 - If in Git repository: `git checkout -b feature/XXX-feature-name`

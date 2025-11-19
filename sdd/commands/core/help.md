@@ -10,13 +10,15 @@ Display comprehensive help information for all SDD commands and workflow guidanc
 ## What to do:
 
 1. **Show the complete SDD workflow**:
-   - Constitution -> Specify -> Clarify -> Plan -> Tasks -> Checklist -> Analyze -> Implement
+   - Validate -> Constitution -> Specify -> Clarify -> Plan -> Tasks -> Checklist -> Analyze -> Implement
    - Explain each step's purpose
    - Mention optional steps (clarify, analyze)
+   - Emphasize SDD-compliant structure requirements
 
 2. **List all available commands with brief descriptions**:
-   - `/sdd.constitution` - Define project principles
-   - `/sdd.specify` - Create functional specification
+   - `/sdd.validate` - Validate and enforce SDD-compliant structure
+   - `/sdd.constitution` - Define project principles and quality standards
+   - `/sdd.specify` - Create functional specification with complete SDD structure
    - `/sdd.clarify` - Resolve specification ambiguities
    - `/sdd.plan` - Generate technical implementation plan
    - `/sdd.tasks` - Create dependency-organized task list

@@ -6,10 +6,11 @@ This directory contains complete SDD (Spec-Driven Development) sample projects o
 
 | Level | Project Type | Time Estimate | Experience | Technology Stack | Files Generated |
 |-------|--------------|---------------|-------------|----------------|---------------|
-| **01-Beginner** | Hello World | **1 hour** | Beginner | HTML5, CSS3, JS | 3 files |
-| **02-Intermediate** | Portfolio | **2-4 weeks** | Intermediate | Modern Static Site | 3 files |
-| **03-Advanced** | Kanban Board | **6-8 weeks** | Advanced | Full-Stack | 2 files |
+| **01-Beginner** | Hello World | **1 hour** | Beginner | HTML5, CSS3, JS | 11 files |
+| **02-Intermediate** | Portfolio | **2-4 weeks** | Intermediate | Modern Static Site | 7 files |
+| **03-Advanced** | Kanban Board | **6-8 weeks** | Advanced | Full-Stack | 6 files |
 | **04-Reference** | Authentication | **4-6 weeks** | Complete | Enterprise | 7 files |
+| **05-Complete Example** | Task Management | **6-8 weeks** | Advanced | Modern Full-Stack | 19 files |
 
 ## 🎯 Choose Your Starting Point
 
@@ -65,6 +66,16 @@ Perfect for:
 - Enterprise security standards
 - Production-ready architecture
 
+### 🟣 **05-Complete Example** - Comprehensive Real-World Application
+Perfect for:
+- Learning the complete SDD workflow end-to-end
+- Understanding real-world complexity management
+- Studying comprehensive documentation structure
+- Reference for enterprise-scale applications
+
+**Sample Project:**
+- **Collaborative Task Management Platform**: Complete multi-tenant application with real-time collaboration, comprehensive documentation, and production-ready configuration. This is the most complete example showing all SDD artifacts in proper directory structure.
+
 ---
 
 ## 📁 Directory Structure
@@ -75,28 +86,102 @@ samples/
 ├── 01-beginner/                       # Simple projects (1 hour)
 │   └── hello-world/
 │       ├── README.md
-│       ├── SPECIFICATION.md
-│       ├── PLAN.md
-│       └── TASKS.md
+│       ├── .specify/                   # 🆕 SDD Enhanced Memory System
+│       │   └── memory/
+│       │       └── constitution.md     # Project principles and standards (authoritative)
+│       └── specs/                      # Complete SDD-generated specifications
+│           └── 001-hello-world-landing/
+│               ├── spec.md              # Complete functional specification
+│               ├── plan.md              # Detailed technical architecture
+│               ├── tasks.md             # 5 implementation tasks
+│               ├── research.md          # Technical research and decisions
+│               ├── data-model.md        # Data structures and information architecture
+│               ├── quickstart.md        # Development setup guide
+│               ├── .env.example         # Environment variables template (project-specific)
+│               ├── Makefile             # Development automation (project-specific)
+│               └── checklists/          # Quality assurance checklists
+│                   ├── requirements.md  # Requirements validation
+│                   ├── ux.md           # User experience testing
+│                   ├── performance.md   # Performance benchmarks
+│                   ├── accessibility.md # Accessibility compliance
+│                   └── security.md      # Security validation
 ├── 02-intermediate/                   # Professional projects (2-4 weeks)
 │   └── portfolio/
 │       ├── README.md
-│       ├── SPECIFICATION.md
-│       └── PLAN.md
+│       ├── .specify/                   # 🆕 SDD Enhanced Memory System
+│       │   └── memory/
+│       │       └── constitution.md     # Project principles and standards (authoritative)
+│       └── specs/                      # Complete SDD-generated specifications
+│           └── 001-portfolio-website/
+│               ├── spec.md              # Complete functional specification
+│               ├── plan.md              # Detailed technical architecture
+│               ├── tasks.md             # 25 implementation tasks
+│               ├── research.md          # Technical research and decisions
+│               ├── data-model.md        # Content structure and data models
+│               ├── quickstart.md        # Development setup guide
+│               ├── .env.example         # Environment variables template (project-specific)
+│               ├── Makefile             # Development automation (project-specific)
+│               └── checklists/          # Quality assurance checklists
+│                   └── requirements.md  # Requirements validation
 ├── 03-advanced/                     # Team projects (6-8 weeks)
 │   └── kanban/
 │       ├── README.md
-│       ├── SPECIFICATION.md
-│       └── TASKS.md
+│       ├── .specify/                   # 🆕 SDD Enhanced Memory System
+│       │   └── memory/
+│       │       └── constitution.md     # Project principles and standards (authoritative)
+│       └── specs/                      # Complete SDD-generated specifications
+│           └── 001-kanban-board/
+│               ├── spec.md              # Complete functional specification
+│               ├── plan.md              # Detailed technical architecture
+│               ├── tasks.md             # 25 implementation tasks
+│               ├── research.md          # Technical research and decisions
+│               ├── data-model.md        # Database schema and data models
+│               ├── quickstart.md        # Development setup guide
+│               ├── .env.example         # Environment variables template (project-specific)
+│               └── Makefile             # Development automation (project-specific)
 └── 04-reference/                      # Complete examples (4-6 weeks)
     └── authentication/
         ├── README.md
-        ├── CONSTITUTION.md
-        ├── SPECIFICATION.md
-        ├── IMPLEMENTATION_PLAN.md
-        ├── TASK_LIST.md
-        ├── .env.example
-        └── Makefile
+        └── specs/                      # Complete SDD-generated specifications
+            └── 001-authentication-system/
+                ├── spec.md              # Complete functional specification
+                ├── plan.md              # Detailed technical architecture
+                ├── tasks.md             # 25 implementation tasks
+                ├── research.md          # Technical research and decisions
+                ├── data-model.md        # Database schema and data models
+                ├── quickstart.md        # Development setup guide
+                ├── .env.example         # Environment variables template (project-specific)
+                ├── Makefile             # Development automation (project-specific)
+                └── checklists/          # Quality assurance checklists
+                    ├── requirements.md  # Requirements validation
+                    ├── ux.md           # User experience testing
+                    ├── performance.md   # Performance benchmarks
+                    ├── accessibility.md # Accessibility compliance
+                    └── security.md      # Security validation
+├── 05-complete-example/                # Comprehensive real-world application (6-8 weeks)
+    ├── README.md                       # Project overview and learning guide
+    ├── CONSTITUTION.md                 # Project principles and standards (root copy)
+    ├── .specify/                        # 🆕 SDD Enhanced Memory System
+    │   └── memory/
+    │       └── constitution.md         # Project principles and standards (authoritative)
+    └── specs/                          # Complete SDD-generated specifications
+        └── 001-collaborative-task-management/
+            ├── spec.md                  # Complete functional specification
+            ├── plan.md                  # Detailed technical architecture
+            ├── tasks.md                 # 25 implementation tasks
+            ├── research.md              # Technical research and decisions
+            ├── data-model.md            # Database schema and data models
+            ├── quickstart.md            # Development setup guide
+            ├── .env.example             # Environment variables template (project-specific)
+            ├── Makefile                 # Development automation (project-specific)
+            ├── contracts/               # API contracts and schemas
+            │   └── api.json             # OpenAPI specification
+            └── checklists/              # Quality assurance checklists
+                ├── requirements.md      # Requirements validation
+                ├── ux.md               # User experience testing
+                ├── performance.md       # Performance benchmarks
+                ├── accessibility.md     # Accessibility compliance
+                └── security.md          # Security validation
 ```
 
 ## 🚀 Quick Start by Level
@@ -128,53 +213,76 @@ samples/
 /sdd.tasks
 ```
 
+### Study Complete Real-World Application (6-8 Weeks)
+```bash
+# Examine the complete task management example
+cd samples/05-complete-example/
+cat README.md                    # Start with project overview
+cat CONSTITUTION.md              # Understand project principles
+cat specs/001-collaborative-task-management/spec.md    # Study specification
+cat specs/001-collaborative-task-management/plan.md    # Review technical plan
+cat specs/001-collaborative-task-management/tasks.md   # Examine implementation tasks
+```
+
 ## 📚 Learning Path
 
 ### Step 1: Understand SDD Basics
 1. Read `01-beginner/hello-world/README.md`
-2. Examine the generated specification, plan, and tasks
-3. Try creating your own simple project
+2. Examine `specs/001-hello-world-landing/` directory structure
+3. Study specification, plan, and SDD-enhanced memory system
+4. Try creating your own simple project
 
 ### Step 2: Build Professional Skills
 1. Study `02-intermediate/portfolio/` examples
-2. Learn intermediate specification writing
-3. Practice with real-world projects
+2. Examine Jekyll-based static site architecture
+3. Learn intermediate specification writing and content management
+4. Practice with real-world projects
 
 ### Step 3: Scale to Team Development
 1. Explore `03-advanced/kanban/` enterprise features
-2. Understand real-time collaboration requirements
-3. Apply to your team projects
+2. Study real-time collaboration architecture and database design
+3. Understand full-stack development with TypeScript and Socket.IO
+4. Apply to your team projects
 
 ### Step 4: Master Complete Workflow
 1. Review `04-reference/authentication/` for full capabilities
-2. Understand enterprise security and automation
-3. Apply to large-scale applications
+2. Study enterprise security patterns and authentication systems
+3. Understand comprehensive documentation and deployment automation
+4. Apply to large-scale applications
 
 ## 🔍 What Each Sample Demonstrates
 
 ### Hello World Sample (01-Beginner)
-- **KISS Principles**: Simplicity focus
-- **Basic Specification**: Simple user stories
-- **Static Planning**: No build tools required
-- **Task Organization**: 5 straightforward tasks
+- **KISS Principles**: Simplicity focus with no dependencies
+- **SDD-Compliant Structure**: Complete specs/ directory with enhanced memory system
+- **Basic Specification**: Simple user stories and acceptance criteria
+- **Static Planning**: HTML5, CSS3, vanilla JavaScript architecture
+- **Task Organization**: 5 straightforward tasks with quality checklists
+- **Comprehensive Documentation**: Research, data-model, quickstart guides
 
 ### Portfolio Sample (02-Intermediate)
-- **Professional Standards**: SEO and performance
-- **Rich Specifications**: Content management features
-- **Modern Planning**: Static site architecture
-- **Task Management**: Professional development workflow
+- **Professional Standards**: SEO optimization and performance focus
+- **Jekyll Integration**: Static site generator with Markdown content
+- **Rich Specifications**: Content management features and project showcase
+- **Modern Planning**: Static hosting with professional deployment
+- **Project-Specific Configuration**: .env.example and Makefile for portfolio development
+- **Enhanced Memory System**: Project principles and quality standards
 
 ### Kanban Sample (03-Advanced)
-- **Team Collaboration**: Real-time features
-- **Complex Requirements**: User management, permissions
-- **Advanced Planning**: Microservices architecture
-- **Enterprise Features**: Scalability and security
+- **Team Collaboration**: Real-time features with Socket.IO integration
+- **Full-Stack Architecture**: React + TypeScript + Node.js + PostgreSQL
+- **Complex Requirements**: User management, permissions, real-time updates
+- **Advanced Planning**: Microservices-ready architecture patterns
+- **Enterprise Features**: Scalability, security, and performance optimization
+- **Database Design**: Comprehensive schema and data relationships
 
 ### Authentication Sample (04-Reference)
-- **Complete Feature Set**: Authentication ecosystem
-- **Enterprise Standards**: Security best practices
-- **Comprehensive Documentation**: Full SDD output
-- **Production Ready**: Environment setup and automation
+- **Complete Feature Set**: Full authentication and authorization ecosystem
+- **Enterprise Standards**: Security best practices and compliance
+- **SDD-Compliant Structure**: Complete specs/ directory with project-specific files
+- **Production Ready**: Environment setup, automation, and deployment
+- **Quality Assurance**: Comprehensive checklists for all aspects
+- **Reference Implementation**: Industry-standard authentication patterns
 
 ## 💡 Choosing the Right Sample
 
@@ -200,10 +308,10 @@ samples/
 
 | Level | SPECIFICATION | PLAN | TASKS | Additional Files |
 |-------|----------------|------|------|----------------|
-| **Beginner** | Basic requirements | Simple architecture | 5 tasks | - |
-| **Intermediate** | Detailed requirements | Modern architecture | 25 tasks | - |
-| **Advanced** | Enterprise requirements | Microservices architecture | 25 tasks | - |
-| **Reference** | Complete requirements | Full-stack architecture | 25 tasks | Constitution, .env, Makefile |
+| **Beginner** | Basic requirements | Simple architecture | 5 tasks | Research, Data Model, Quickstart, Checklists |
+| **Intermediate** | Detailed requirements | Modern architecture | 25 tasks | Research, Data Model, Quickstart, .env, Makefile |
+| **Advanced** | Enterprise requirements | Full-stack architecture | 25 tasks | Research, Data Model, Quickstart, .env, Makefile |
+| **Reference** | Complete requirements | Full-stack architecture | 25 tasks | Research, Data Model, Quickstart, Checklists, .env, Makefile |
 
 ## 🏆 Why This Organization?
 

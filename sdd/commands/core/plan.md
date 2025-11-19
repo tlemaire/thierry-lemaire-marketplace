@@ -9,22 +9,30 @@ Generate detailed technical implementation plan with architecture decisions base
 
 ## What to do:
 
-1. **Find current specification** by looking for:
+1. **Validate SDD-compliant project structure**:
+   - Verify `.specify/memory/constitution.md` exists
+   - Verify `specs/` directory structure exists
+   - Check for active feature specification
+   - Ensure project follows SDD methodology
+
+2. **Find current specification** by looking for:
    - Most recent `specs/XXX-feature-name/spec.md` file
    - Or specification file in current working directory
    - Or ask user to specify file path if multiple found
 
-2. **Parse tech stack input** from user command:
+3. **Parse tech stack input** from user command:
    - Extract frameworks, languages, databases, tools
    - Identify deployment environment
    - Note any specific libraries or services
 
-3. **Read project constitution** if available:
-   - Check `CONSTITUTION.md` in project root
-   - Check `docs/constitution.md`
-4. **Analyze specification requirements** and map to technical solutions
+4. **Read project constitution** from SDD-enhanced memory:
+   - **Primary**: `.specify/memory/constitution.md`
+   - **Fallback**: `CONSTITUTION.md` in project root
+   - **Legacy**: `docs/constitution.md`
 
-5. **Generate comprehensive technical plan** with these sections:
+5. **Analyze specification requirements** and map to technical solutions
+
+6. **Generate comprehensive technical plan** with these sections:
 
    ```markdown
    # Technical Implementation Plan
@@ -77,10 +85,11 @@ Generate detailed technical implementation plan with architecture decisions base
 
 6. **Create data model documentation**: `data-model.md`
 7. **Generate research file**: `research.md` with technical decisions and alternatives
-8. **Create environment templates**:
+8. **Create quickstart guide**: `quickstart.md` with setup instructions
+9. **Create environment templates** (project-specific):
    - `.env.example` with all required environment variables
    - `Makefile` with essential development commands
-9. **Write main plan file**: `specs/XXX-feature-name/plan.md`
+10. **Write main plan file**: `specs/XXX-feature-name/plan.md`
 
 ## Data Model Section:
 ```markdown

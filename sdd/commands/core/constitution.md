@@ -10,11 +10,16 @@ Create or update project constitution with guiding principles and quality standa
 ## What to do:
 
 1. **Parse user input** for principles, guidelines, and quality standards
-2. **Check for existing constitution** in common locations:
-   - `CONSTITUTION.md` in project root
-   - `docs/constitution.md` (if docs directory exists)
-   - Ask user to specify location if multiple found
-3. **Create comprehensive constitution** with these sections:
+2. **Create SDD-compliant directory structure**:
+   - Create `.specify/memory/` directory structure
+   - Create project `specs/` directory structure
+   - Set up project-specific configuration files
+
+3. **Create constitution in SDD-enhanced memory system**:
+   - **Primary Location**: `.specify/memory/constitution.md` (SDD Enhanced Memory)
+   - **Legacy Location**: `CONSTITUTION.md` in project root (for backward compatibility)
+
+4. **Create comprehensive constitution** with these sections:
    - **Core Development Principles** - Foundational values (KISS, YAGNI, etc.)
    - **Project Principles** - User-provided specific principles
    - **Quality Standards** - Code quality, testing, documentation
@@ -26,8 +31,20 @@ Create or update project constitution with guiding principles and quality standa
    - **Deployment Guidelines** - Environments, release process
    - **Environment Management** - .env files, configuration, secrets
 
-4. **Choose appropriate location** for the constitution:
-   - **Preferred**: `CONSTITUTION.md` in project root (simplest, most discoverable)
+5. **Create project-specific configuration files**:
+   - `.env.example` with environment variable templates
+   - `Makefile` with development automation targets
+   - `README.md` with SDD project overview and structure
+
+6. **Initialize project structure**:
+   - Create basic `specs/001-project-setup/` directory
+   - Add `.gitignore` for SDD-specific files and directories
+   - Set up project tracking and metadata files
+
+7. **Validate SDD-compliant structure**:
+   - Verify all required directories exist
+   - Confirm constitution file created in correct locations
+   - Validate project-specific files are properly configured
    - **Alternative**: `docs/constitution.md` (if docs directory exists)
    - **Custom**: Ask user for preferred location
 5. **Write constitution.md** with formatted markdown sections

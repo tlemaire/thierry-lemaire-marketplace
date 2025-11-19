@@ -131,25 +131,40 @@ These samples represent a complete SDD workflow for building a user authenticati
 
 The result is a production-ready foundation that any development team can immediately start implementing with clear direction and all necessary tools in place.
 
-## File Structure Generated
+## SDD-Compliant File Structure
+
+This reference sample demonstrates the complete SDD file structure with both legacy and modern organization:
 
 ```
-project-root/
-├── CONSTITUTION.md              # Project principles (this sample)
-├── .env.example                # Environment variables (this sample)
-├── Makefile                    # Development automation (this sample)
-└── specs/
-    └── 001-user-authentication/
-        ├── spec.md              # Requirements (similar to SPECIFICATION.md)
-        ├── plan.md              # Technical plan (similar to IMPLEMENTATION_PLAN.md)
-        ├── tasks.md             # Task breakdown (similar to TASK_LIST.md)
-        ├── research.md          # Technical research
-        ├── data-model.md        # Database schema
-        └── checklists/          # Quality checklists
-            ├── requirements.md
-            ├── ux.md
-            ├── performance.md
-            └── accessibility.md
+04-reference/authentication/
+├── README.md                              # This file - overview and guide
+├── CONSTITUTION.md                        # Project principles (root copy - legacy format)
+├── SPECIFICATION.md                       # Requirements specification (legacy format)
+├── IMPLEMENTATION_PLAN.md                 # Technical plan (legacy format)
+├── TASK_LIST.md                           # Task breakdown (legacy format)
+└── specs/                                 # 🆕 Complete SDD-generated specifications
+    └── 001-authentication-system/
+        ├── spec.md                         # Requirements (modern format)
+        ├── plan.md                         # Technical plan (modern format)
+        ├── tasks.md                        # Task breakdown (modern format)
+        ├── research.md                     # Technical research and decisions
+        ├── data-model.md                   # Database schema and data models
+        ├── quickstart.md                   # Development setup and implementation guide
+        ├── .env.example                    # Environment variables template (project-specific)
+        ├── Makefile                        # Development automation (project-specific)
+        └── checklists/                     # Quality assurance checklists
+            ├── requirements.md             # Requirements validation
+            ├── ux.md                        # User experience testing
+            ├── performance.md              # Performance benchmarks
+            ├── accessibility.md            # Accessibility compliance
+            └── security.md                 # Security validation
 ```
+
+## What Makes This SDD-Compliant
+- **Project-Specific Configuration**: .env.example and Makefile in specs/ directory
+- **Complete Documentation**: Research, data-model, and quickstart guides
+- **Quality Assurance**: Comprehensive checklists for all aspects
+- **Modern Structure**: Follows `specs/XXX-feature-name/` naming convention
+- **Legacy Compatibility**: Shows both old and new SDD formats for reference
 
 Start using SDD today to generate these comprehensive project foundations for your own features and applications!

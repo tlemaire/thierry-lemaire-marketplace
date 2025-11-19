@@ -10,9 +10,24 @@ This advanced SDD example demonstrates building a comprehensive collaborative ka
 /sdd.tasks
 ```
 
-## Generated Files
-- **[SPECIFICATION.md](SPECIFICATION.md)** - Enterprise-level specification with detailed requirements
-- **[TASKS.md](TASKS.md)** - 25 detailed implementation tasks across 4 phases (250+ hours)
+## SDD-Generated Files
+This sample demonstrates the complete SDD methodology with the following generated files:
+
+### Core SDD Files (in `specs/001-kanban-board/`)
+- **[spec.md](specs/001-kanban-board/spec.md)** - Enterprise-level specification with detailed requirements
+- **[tasks.md](specs/001-kanban-board/tasks.md)** - 25 detailed implementation tasks across 4 phases (250+ hours)
+
+### Supporting Documentation
+- **[research.md](specs/001-kanban-board/research.md)** - Technical research on React, TypeScript, Node.js, PostgreSQL stack
+- **[data-model.md](specs/001-kanban-board/data-model.md)** - Comprehensive database schema and data relationships
+- **[quickstart.md](specs/001-kanban-board/quickstart.md)** - Development setup guide for full-stack application
+
+### Project Configuration
+- **[.env.example](specs/001-kanban-board/.env.example)** - Environment variables template for full-stack configuration
+- **[Makefile](specs/001-kanban-board/Makefile)** - Development automation commands for full-stack workflow
+
+### SDD Enhanced Memory System
+- **[.specify/memory/constitution.md](.specify/memory/constitution.md)** - Enterprise principles and quality standards (authoritative)
 
 ## Key Characteristics
 - **Complexity**: Advanced
@@ -57,7 +72,7 @@ This advanced sample demonstrates:
 ## Technical Architecture
 - **Frontend**: React 18 + TypeScript + Redux Toolkit
 - **Backend**: Node.js + Express + TypeScript
-- **Database**: PostgreSQL with Prisma ORM
+- **Database**: PostgreSQL with comprehensive schema
 - **Real-time**: Socket.IO for live collaboration
 - **Authentication**: JWT + OAuth integration
 - **File Storage**: AWS S3 or similar
@@ -68,6 +83,42 @@ This advanced sample demonstrates:
 2. **Core Kanban** (Weeks 2-4): Boards, cards, drag-and-drop, collaboration
 3. **Advanced Features** (Weeks 4-5): Search, notifications, automation
 4. **Polish & Optimization** (Weeks 5-6): Mobile, performance, security, deployment
+
+## SDD-Compliant File Structure
+```
+03-advanced/kanban/
+├── README.md                                    # This file - project overview
+├── client/                                      # React frontend (to be created)
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── server/                                      # Node.js backend (to be created)
+│   ├── src/
+│   ├── prisma/
+│   └── package.json
+├── docker-compose.yml                            # Development containers
+├── .specify/                                    # 🆕 SDD Enhanced Memory System
+│   └── memory/
+│       └── constitution.md                      # Enterprise principles and quality standards (authoritative)
+└── specs/                                       # Complete SDD-generated specifications
+    └── 001-kanban-board/
+        ├── spec.md                               # Complete functional specification
+        ├── tasks.md                              # 25 implementation tasks
+        ├── research.md                           # Technical research and decisions
+        ├── data-model.md                         # Database schema and data models
+        ├── quickstart.md                         # Development setup and implementation guide
+        ├── .env.example                          # Environment variables template (project-specific)
+        └── Makefile                              # Development automation (project-specific)
+```
+
+## What Makes This SDD-Compliant
+- **Full-Stack Architecture**: React + TypeScript + Node.js + PostgreSQL + Socket.IO
+- **Project-Specific Configuration**: .env.example and Makefile for complex development workflow
+- **Enhanced Memory System**: .specify/memory/constitution.md for enterprise principles
+- **Comprehensive Research**: Technical analysis of modern full-stack technologies
+- **Database Design**: Complete schema with relationships and optimization patterns
+- **Enterprise Workflow**: Docker Compose setup and full-stack development automation
+- **Total Files**: 6 files demonstrating advanced SDD methodology
 
 This is the most comprehensive SDD example, showcasing how the methodology scales to complex, enterprise-level applications with real-time collaboration features and professional-grade architecture.
 

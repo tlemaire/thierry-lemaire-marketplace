@@ -102,16 +102,20 @@ specs/
 │   ├── research.md          # 🔬 Technical research and decisions
 │   ├── data-model.md        # 🗄️ Database schema and data models
 │   ├── quickstart.md        # 🚀 Development setup and quick start guide
+│   ├── .env.example         # 📝 Environment variables template (project-specific)
+│   ├── Makefile             # 🛠️ Development automation (project-specific)
 │   ├── checklists/          # ✅ Quality assurance checklists
 │   │   ├── requirements.md  # Requirements validation checklist
 │   │   ├── ux.md           # User experience testing checklist
 │   │   ├── performance.md   # Performance benchmarks and testing
-│   │   └── accessibility.md # Accessibility compliance checklist
+│   │   ├── accessibility.md # Accessibility compliance checklist
+│   │   └── security.md      # Security validation checklist
 │   └── contracts/           # 📄 API contracts and schemas (if applicable)
 │       └── api.json        # OpenAPI specification
 ├── .specify/
 │   └── memory/
 │       └── constitution.md   # 📜 Project principles and quality standards
+CONSTITUTION.md              # 📄 Project principles and standards (root copy)
 ```
 
 ### File Purposes
@@ -122,6 +126,10 @@ specs/
 - **`research.md`** - Technology evaluation, proof-of-concepts, and architectural decisions
 - **`data-model.md`** - Database schemas, data relationships, and validation rules
 - **`quickstart.md`** - Environment setup, installation steps, and first-run instructions
+- **`.env.example`** - Project-specific environment variables template
+- **`Makefile`** - Project-specific development automation and build scripts
+- **`constitution.md`** (memory system) - Project principles and quality standards (authoritative)
+- **`constitution.md`** (root copy) - Project principles for team accessibility
 
 ## 🎯 SDD Core Principles
 

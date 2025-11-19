@@ -10,10 +10,28 @@ This intermediate SDD example demonstrates building a professional portfolio web
 /sdd.tasks
 ```
 
-## Generated Files
-- **[SPECIFICATION.md](SPECIFICATION.md)** - Comprehensive requirements with detailed user stories
-- **[PLAN.md](PLAN.md)** - Modern static site architecture with optimization strategies
-- **[TASKS.md](TASKS.md)** - 25 detailed implementation tasks (2-4 weeks development)
+## SDD-Generated Files
+This sample demonstrates the complete SDD methodology with the following generated files:
+
+### Core SDD Files (in `specs/001-portfolio-website/`)
+- **[spec.md](specs/001-portfolio-website/spec.md)** - Comprehensive requirements with detailed user stories
+- **[plan.md](specs/001-portfolio-website/plan.md)** - Modern static site architecture with optimization strategies
+- **[tasks.md](specs/001-portfolio-website/tasks.md)** - 25 detailed implementation tasks (2-4 weeks development)
+
+### Supporting Documentation
+- **[research.md](specs/001-portfolio-website/research.md)** - Technical research and Jekyll/Static Site Generator analysis
+- **[data-model.md](specs/001-portfolio-website/data-model.md)** - Content structure and Jekyll data organization
+- **[quickstart.md](specs/001-portfolio-website/quickstart.md)** - Development setup and Jekyll workflow guide
+
+### Project Configuration
+- **[.env.example](specs/001-portfolio-website/.env.example)** - Environment variables template for Jekyll configuration
+- **[Makefile](specs/001-portfolio-website/Makefile)** - Development automation commands for static site workflow
+
+### Quality Assurance
+- **[checklists/requirements.md](specs/001-portfolio-website/checklists/requirements.md)** - Requirements validation checklist
+
+### SDD Enhanced Memory System
+- **[.specify/memory/constitution.md](.specify/memory/constitution.md)** - Project principles and quality standards (authoritative)
 
 ## Key Characteristics
 - **Complexity**: Intermediate
@@ -135,28 +153,45 @@ This intermediate sample demonstrates:
 - **Critical CSS**: Inline critical CSS, lazy load rest
 - **Caching**: Service worker for offline support
 
-## File Structure
+## SDD-Compliant File Structure
 ```
 02-intermediate/portfolio/
-├── src/
-│   ├── index.html             # Main homepage
-│   ├── about.html             # About page
-│   ├── projects/              # Project showcase
-│   ├── blog/                  # Blog articles
-│   ├── assets/
-│   │   ├── css/               # Stylesheets
-│   │   ├── js/                # JavaScript files
-│   │   └── images/            # Optimized images
-│   └── _data/                 # Site data and configuration
-├── _posts/                    # Blog posts in markdown
-├── _projects/                 # Project data and descriptions
-├── _includes/                 # Reusable components
-├── _layouts/                  # Page templates
-├── README.md                  # This file
-├── SPECIFICATION.md           # Requirements and user stories
-├── PLAN.md                    # Technical implementation plan
-└── TASKS.md                   # Development tasks breakdown
+├── README.md                                    # This file - project overview
+├── index.html                                   # Main homepage (to be implemented)
+├── _config.yml                                  # Jekyll configuration (to be created)
+├── _layouts/                                    # Page templates (to be created)
+├── _includes/                                   # Reusable components (to be created)
+├── _posts/                                      # Blog posts in markdown (to be created)
+├── _projects/                                   # Project data (to be created)
+├── assets/                                      # Static assets (to be created)
+│   ├── css/                                     # Stylesheets
+│   ├── js/                                      # JavaScript files
+│   └── images/                                  # Optimized images
+├── .specify/                                    # 🆕 SDD Enhanced Memory System
+│   └── memory/
+│       └── constitution.md                      # Project principles and quality standards (authoritative)
+└── specs/                                       # Complete SDD-generated specifications
+    └── 001-portfolio-website/
+        ├── spec.md                               # Complete functional specification
+        ├── plan.md                               # Detailed technical architecture
+        ├── tasks.md                              # 25 implementation tasks
+        ├── research.md                           # Technical research and decisions
+        ├── data-model.md                         # Content structure and data models
+        ├── quickstart.md                         # Development setup and implementation guide
+        ├── .env.example                          # Environment variables template (project-specific)
+        ├── Makefile                              # Development automation (project-specific)
+        └── checklists/                           # Quality assurance checklists
+            └── requirements.md                   # Requirements validation
 ```
+
+## What Makes This SDD-Compliant
+- **Jekyll Integration**: Static site generator with Markdown content management
+- **Project-Specific Configuration**: .env.example and Makefile for Jekyll development
+- **Enhanced Memory System**: .specify/memory/constitution.md for portfolio principles
+- **Professional Documentation**: Research on static site generators and performance optimization
+- **Content Structure**: Data models for portfolio projects and Jekyll organization
+- **Complete Workflow**: Quickstart guide for Jekyll development and deployment
+- **Total Files**: 7 files demonstrating intermediate SDD methodology
 
 ## Result
 A professional, fast-loading portfolio website that showcases modern web development skills while providing excellent user experience and SEO performance. Perfect for attracting clients, demonstrating expertise, and building professional online presence.

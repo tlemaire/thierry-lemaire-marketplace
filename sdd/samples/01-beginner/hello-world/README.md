@@ -10,10 +10,33 @@ This beginner SDD example demonstrates creating a simple static website with no 
 /sdd.tasks
 ```
 
-## Generated Files
-- **[SPECIFICATION.md](SPECIFICATION.md)** - Basic requirements with 3 user stories
-- **[PLAN.md](PLAN.md)** - Simple static site architecture
-- **[TASKS.md](TASKS.md)** - 5 straightforward implementation tasks (1 hour total)
+## SDD-Generated Files
+This sample demonstrates the complete SDD methodology with the following generated files:
+
+### Core SDD Files (in `specs/001-hello-world-landing/`)
+- **[spec.md](specs/001-hello-world-landing/spec.md)** - Basic requirements with 3 user stories
+- **[plan.md](specs/001-hello-world-landing/plan.md)** - Simple static site architecture
+- **[tasks.md](specs/001-hello-world-landing/tasks.md)** - 5 straightforward implementation tasks (1 hour total)
+
+### Supporting Documentation
+- **[research.md](specs/001-hello-world-landing/research.md)** - Technical research and decision rationale
+- **[data-model.md](specs/001-hello-world-landing/data-model.md)** - Content structure and data organization
+- **[quickstart.md](specs/001-hello-world-landing/quickstart.md)** - Development setup and implementation guide
+
+### Project Configuration
+- **[.env.example](specs/001-hello-world-landing/.env.example)** - Environment variables template
+- **[Makefile](specs/001-hello-world-landing/Makefile)** - Development automation commands
+
+### Quality Assurance
+- **[checklists/](specs/001-hello-world-landing/checklists/)** - Comprehensive quality checklists:
+  - **[requirements.md](specs/001-hello-world-landing/checklists/requirements.md)** - Requirements validation
+  - **[ux.md](specs/001-hello-world-landing/checklists/ux.md)** - User experience testing
+  - **[performance.md](specs/001-hello-world-landing/checklists/performance.md)** - Performance benchmarks
+  - **[accessibility.md](specs/001-hello-world-landing/checklists/accessibility.md)** - Accessibility compliance
+  - **[security.md](specs/001-hello-world-landing/checklists/security.md)** - Security validation
+
+### SDD Enhanced Memory System
+- **[.specify/memory/constitution.md](.specify/memory/constitution.md)** - Project principles and quality standards (authoritative)
 
 ## Key Characteristics
 - **Complexity**: Beginner
@@ -73,15 +96,39 @@ This simple sample demonstrates:
 4. **Testing** (10 minutes): Verify cross-browser compatibility and responsiveness
 5. **Deployment** (10 minutes): Simple file upload or GitHub Pages
 
-## File Structure
+## SDD-Compliant File Structure
 ```
 01-beginner/hello-world/
-├── index.html          # Complete single-file website
-├── README.md           # This file
-├── SPECIFICATION.md    # Feature requirements and user stories
-├── PLAN.md            # Technical implementation approach
-└── TASKS.md           # Step-by-step implementation tasks
+├── README.md                                    # This file - project overview
+├── index.html                                   # Complete single-file website (to be implemented)
+├── .specify/                                    # 🆕 SDD Enhanced Memory System
+│   └── memory/
+│       └── constitution.md                      # Project principles and quality standards (authoritative)
+└── specs/                                       # Complete SDD-generated specifications
+    └── 001-hello-world-landing/
+        ├── spec.md                               # Complete functional specification
+        ├── plan.md                               # Detailed technical architecture
+        ├── tasks.md                              # 5 implementation tasks
+        ├── research.md                           # Technical research and decisions
+        ├── data-model.md                         # Content structure and data models
+        ├── quickstart.md                         # Development setup and implementation guide
+        ├── .env.example                          # Environment variables template (project-specific)
+        ├── Makefile                              # Development automation (project-specific)
+        └── checklists/                           # Quality assurance checklists
+            ├── requirements.md                   # Requirements validation
+            ├── ux.md                            # User experience testing
+            ├── performance.md                    # Performance benchmarks
+            ├── accessibility.md                  # Accessibility compliance
+            └── security.md                       # Security validation
 ```
+
+## What Makes This SDD-Compliant
+- **Project-Specific Configuration**: .env.example and Makefile in specs/ directory
+- **Enhanced Memory System**: .specify/memory/constitution.md for project principles
+- **Comprehensive Documentation**: Research, data-model, and quickstart guides
+- **Quality Assurance**: Complete checklists for all aspects
+- **Proper SDD Structure**: Follows `specs/XXX-feature-name/` naming convention
+- **Total Files**: 11 files demonstrating complete SDD methodology
 
 ## Result
 A fast-loading, mobile-friendly landing page that demonstrates professional web development using only web standards. Perfect for portfolios, event pages, product launches, or personal websites.

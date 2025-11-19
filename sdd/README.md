@@ -1,257 +1,196 @@
-# SDD - Spec-Driven Development
+# Spec-Driven Development (SDD) Plugin
 
-Transform ideas into structured specifications and executable code through a systematic workflow optimized for Claude Code.
+> Transform ideas into structured specifications and executable code through systematic workflow
 
-## What is SDD?
+## Overview
 
-**SDD (Spec-Driven Development)** is a systematic methodology that transforms ideas into structured specifications and executable code through a standardized workflow. Fully compliant with GitHub Spec Kit principles, SDD enhances the specification-driven approach with improved memory management and usability features.
+The Spec-Driven Development (SDD) plugin for Claude Code implements a comprehensive methodology that transforms your ideas into structured specifications and executable code through a systematic workflow. SDD follows specification-first development principles optimized for Claude Code's unique capabilities.
 
-### Core Philosophy
-- **Specification First**: Define WHAT and WHY before HOW
-- **Iterative Development**: Every change follows the same structured workflow
-- **Quality by Design**: Built-in checklists and consistency analysis
-- **Traceability**: Direct links from requirements to implementation
-- **Anti-Abstraction**: Use frameworks directly without unnecessary layers
-- **Enhanced Memory**: Transparent, distributed context management for teams
+## Quick Start
 
-## Why Use SDD?
-
-**For Individual Developers:**
-- 🎯 **Clarity**: Eliminate scope creep and ambiguous requirements
-- ⚡ **Speed**: Automated task generation and environment setup
-- 🔧 **Consistency**: Standardized approach across all projects
-- 📈 **Quality**: Built-in QA processes and best practices
-
-**For Teams:**
-- 🤝 **Collaboration**: Shared understanding through clear specifications
-- 📋 **Traceability**: Track features from idea to deployment
-- 🔄 **Onboarding**: Easy for new members to understand project structure
-- 📊 **Visibility**: Clear progress tracking and documentation
-
-**For Enterprise:**
-- 🏛️ **Governance**: Consistent methodology across projects
-- 🔒 **Quality Assurance**: Built-in checklists and validation
-- 📈 **Scalability**: Methodology scales from simple to complex projects
-- 💰 **Efficiency**: Reduced rework and miscommunication
-
-## GitHub Spec Kit Compliance
-
-✅ **Fully Compliant** with GitHub Spec Kit principles and methodology.
-
-### Compliance Overview
-- **Workflow Alignment**: 100% adherence to Spec Kit's specification-driven development process
-- **Executable Specifications**: Rich, detailed specifications that drive implementation
-- **Quality Gates**: Enhanced validation and consistency analysis
-- **Intent-Driven Development**: Clear separation of requirements from implementation
-
-### Key Differences & Enhancements
-- **Command Naming**: `/sdd.*` instead of `/speckit.*` (enhanced usability)
-- **Memory Management**: Distributed file-based approach vs `.specify/memory/` directory
-- **Additional Commands**: Clarify, Checklist, Analyze, and Help for enhanced workflow
-- **Progressive Samples**: Complexity-organized learning examples
-
-> **Note**: These differences enhance the Spec Kit experience while maintaining full compliance with core principles. For detailed compliance analysis, see the comprehensive [SPEC_KIT_COMPLIANCE.md](SPEC_KIT_COMPLIANCE.md) analysis (100% ✅ compliance).
-
-## Enhanced Memory Approach
-
-SDD implements a superior memory management system compared to traditional `.specify/memory/` approaches.
-
-### What is "Memory" in Spec-Driven Development?
-Memory refers to **persistent context storage** that maintains project knowledge, decisions, and patterns across development sessions. It ensures consistency and enables the AI to learn from previous work.
-
-### SDD's Distributed Memory System
-
-#### 🏛️ **Project Memory** (Constitution)
-```
-CONSTITUTION.md              # Project principles and standards
-docs/constitution.md         # Alternative documentation location
-.claude/constitution.md      # Claude-specific configuration
-```
-
-#### 📋 **Feature Memory** (Specifications)
-```
-specs/XXX-feature-name/
-├── spec.md              # Feature requirements and user stories
-├── plan.md              # Technical decisions and architecture
-├── tasks.md             # Implementation roadmap and dependencies
-├── research.md          # Technical research and findings
-└── data-model.md        # Data architecture and schemas
-```
-
-#### ✅ **Quality Memory** (Checklists)
-```
-specs/XXX-feature-name/checklists/
-├── code-review.md       # Review standards and criteria
-├── testing.md          # Testing requirements and coverage
-├── documentation.md    # Documentation standards and templates
-└── security.md         # Security practices and validation
-```
-
-### Advantages Over Traditional Memory
-
-| Traditional (.specify/memory/) | SDD Enhanced Memory |
-|--------------------------------|---------------------|
-| ❌ Hidden directory structure | ✅ Visible, discoverable files |
-| ❌ Single large memory file | ✅ Distributed by feature/type |
-| ❌ Hard to version control | ✅ Git-friendly, trackable changes |
-| ❌ AI-centric format | ✅ Human-readable markdown |
-| ❌ Limited scalability | ✅ Grows with project complexity |
-
-### Memory Persistence Benefits
-
-1. **🔍 Discoverability**: All project knowledge is visible and searchable
-2. **👥 Team Collaboration**: Memory files work seamlessly with version control
-3. **📈 Scalability**: Organized structure grows cleanly with project size
-4. **🔄 Continuity**: Context preserved across sessions and team members
-5. **📚 Learning**: Accumulated knowledge becomes project documentation
-6. **🛠️ Maintainability**: Easy to update and evolve memory over time
-
-## How to Use SDD
-
-### The SDD Workflow
-
-SDD follows a systematic 8-step workflow that transforms ideas into production-ready code:
-
-1. **🏛️ Constitution** - Define project principles and quality standards
-2. **📋 Specify** - Transform ideas into structured specifications
-3. **❓ Clarify** - (Optional) Resolve specification ambiguities interactively
-4. **🏗️ Plan** - Generate detailed technical implementation plan
-5. **📝 Tasks** - Break down into 25 dependency-organized implementation tasks
-6. **✅ Checklists** - Generate quality assurance checklists
-7. **📊 Analyze** - (Optional) Ensure consistency between all artifacts
-8. **🚀 Implement** - Execute tasks in logical dependency order
-
-### Getting Started
-
-**For Beginners - Start Simple:**
+### Installation
 ```bash
-# Learn the workflow
+# Add SDD marketplace repository
+claude plugin marketplace add https://github.com/tlemaire/marketplace
+
+# Install the plugin
+claude plugin install sdd@marketplace
+
+# Verify installation
 /sdd.help
+```
 
-# Your first project (1 hour)
+### Your First Project
+```bash
+# 1. Set project principles
 /sdd.constitution "Simple, no dependencies, fast loading"
+
+# 2. Create specification
 /sdd.specify "Create a simple landing page with contact form"
+
+# 3. Plan implementation
 /sdd.plan "HTML5, CSS3, vanilla JavaScript"
+
+# 4. Generate tasks
 /sdd.tasks
+
+# 5. Create quality checklists
+/sdd.checklist "requirements, ux, performance"
 ```
 
-**For Intermediate Projects:**
+## SDD-Compliant Structure
+
+This plugin itself follows the SDD methodology it promotes - "eating our own dog food":
+
+```
+sdd/
+├── README.md                           # 📖 Project overview
+├── .specify/                           # 🧠 Enhanced Memory System
+│   └── memory/
+│       └── constitution.md             # Project principles (authoritative)
+└── specs/                              # 📋 Complete specifications
+    └── 001-sdd-plugin/                 # Plugin specification
+        ├── spec.md                     # Functional specification
+        ├── plan.md                     # Technical implementation plan
+        ├── tasks.md                    # Implementation tasks
+        ├── research.md                 # Technical research
+        ├── data-model.md               # Data structures
+        ├── quickstart.md               # Development setup guide
+        ├── .env.example                # Environment variables
+        ├── Makefile                    # Development automation
+        └── checklists/                 # Quality assurance
+            ├── requirements.md         # Requirements validation
+            ├── ux.md                   # User experience testing
+            ├── performance.md          # Performance benchmarks
+            ├── accessibility.md        # Accessibility compliance
+            └── security.md             # Security validation
+```
+
+## Available Commands
+
+### Core Commands
 ```bash
-# Professional portfolio website (2-4 weeks)
-/sdd.constitution "Professional presentation, SEO optimized, mobile-first"
-/sdd.specify "Build a portfolio showcasing React and Node.js projects"
-/sdd.plan "Modern web technologies, static hosting, performance optimized"
-/sdd.tasks
-/sdd.implement
+/sdd.constitution "text"     # Set project principles and standards
+/sdd.specify "description"    # Create specification from description
+/sdd.plan "tech stack"        # Generate technical implementation plan
+/sdd.tasks                   # Generate dependency-organized tasks
 ```
 
-**For Advanced Team Projects:**
+### Quality Commands
 ```bash
-# Enterprise kanban system (6-8 weeks)
-/sdd.constitution "Real-time collaboration, enterprise security, scalability"
-/sdd.specify "Build collaborative kanban system with team features"
-/sdd.plan "React, TypeScript, Node.js, PostgreSQL, Socket.IO"
-/sdd.tasks
-/sdd.implement
+/sdd.clarify                 # Resolve specification ambiguities
+/sdd.checklist "type"        # Generate quality checklists
+/sdd.analyze                 # Analyze consistency between artifacts
 ```
 
-### Best Practices
-
-- Start with simple projects
-- Every feature follows the SDD workflow
-- Use `.clarify` for ambiguous specifications
-- Share specifications before implementation
-
-## Commands
-
-**Foundation:**
-- `/sdd.help` - Show help and workflow guidance
-- `/sdd.constitution` - Define project principles
-
-**Specification:**
-- `/sdd.specify` - Create structured specification
-- `/sdd.clarify` - Resolve specification ambiguities
-
-**Planning:**
-- `/sdd.plan` - Generate technical implementation plan
-- `/sdd.tasks` - Create 25 dependency-organized tasks
-
-**Quality:**
-- `/sdd.checklist` - Generate quality checklists
-- `/sdd.analyze` - Analyze consistency
-
-**Implementation:**
-- `/sdd.implement` - Execute tasks in dependency order
-
-## Generated Files
-
-Each SDD workflow creates a complete project structure:
-
-```
-specs/
-├── XXX-feature-name/
-│   ├── spec.md              # Functional specification
-│   ├── plan.md              # Technical implementation plan
-│   ├── tasks.md             # 25 dependency-organized tasks
-│   ├── research.md          # Technical research
-│   ├── data-model.md        # Database schema
-│   └── checklists/          # Quality checklists
-CONSTITUTION.md              # Project principles and standards
-.env.example                # Environment variables template
-Makefile                    # Development automation (15+ commands)
-```
-
-## Example Project
-
+### Help Command
 ```bash
-# Set project principles
-/sdd.constitution "KISS principles, React, TypeScript, 90% test coverage"
-
-# Create specification
-/sdd.specify "Build a task management system with drag-and-drop"
-
-# Technical planning
-/sdd.plan "React, TypeScript, Node.js, Express, PostgreSQL"
-
-# Generate and execute tasks
-/sdd.tasks
-/sdd.implement
+/sdd.help                    # Show comprehensive help and guidance
+/sdd.help "command name"     # Get help for specific command
 ```
 
-## Features
+## Key Benefits
 
-- **GitHub Spec Kit Compliance**: Full adherence to specification-driven development principles
-- **Enhanced Memory System**: Distributed, visible, and Git-friendly context management
-- **KISS & YAGNI Principles**: Built-in guidance for simple code
-- **Environment Management**: Automatic .env.example and Makefile generation
-- **25-Task Breakdown**: Dependency-organized implementation tasks
-- **Quality Gates**: Built-in checklists and consistency analysis
-- **Git Integration**: Automatic branch creation and management
-- **Traceability**: Clear links from requirements to implementation
-- **Progressive Learning**: Complexity-organized samples for skill development
+### For Individual Developers
+- **Clarity**: Eliminate scope creep and ambiguous requirements
+- **Speed**: Automated task generation and environment setup
+- **Quality**: Built-in quality gates and best practices
+- **Consistency**: Standardized approach across all projects
+
+### For Teams
+- **Collaboration**: Shared understanding through clear specifications
+- **Traceability**: Track features from idea to implementation
+- **Onboarding**: Easy for new members to understand project structure
+- **Visibility**: Clear progress tracking and documentation
+
+### For Enterprise
+- **Governance**: Consistent methodology across projects
+- **Quality Assurance**: Built-in checklists and validation
+- **Scalability**: Methodology scales from simple to complex projects
+- **Efficiency**: Reduced rework and miscommunication
+
+## Sample Projects
+
+Explore sample projects by complexity:
+
+- **Beginner**: `samples/01-beginner/hello-world/` - Simple landing page (1 hour)
+- **Intermediate**: `samples/02-intermediate/portfolio/` - Professional website (2-4 weeks)
+- **Advanced**: `samples/03-advanced/kanban/` - Collaborative system (6-8 weeks)
+- **Complete**: `samples/05-complete-example/` - Full application with all features (6-8 weeks)
 
 ## Documentation
 
-- [Complete Guide](SDD.md) - Full methodology documentation
-- [Developer Guide](CLAUDE.md) - Claude-specific guidance and development
-- [Spec Kit Compliance](../SPEC_KIT_COMPLIANCE.md) - Detailed compliance analysis and comparison
-- [Changelog](../CHANGELOG.md) - Version history and release notes
-- [Sample Outputs](samples/) - Example SDD-generated files and workflows
+### Plugin Specification
+- **[Specification](specs/001-sdd-plugin/spec.md)** - Complete functional requirements
+- **[Technical Plan](specs/001-sdd-plugin/plan.md)** - Implementation architecture
+- **[Implementation Tasks](specs/001-sdd-plugin/tasks.md)** - Development roadmap
+- **[Research](specs/001-sdd-plugin/research.md)** - Technical analysis
 
-## Samples
+### User Guides
+- **[Quick Start Guide](specs/001-sdd-plugin/quickstart.md)** - Step-by-step tutorial
+- **[How To Guide](specs/001-sdd-plugin/how-to.md)** - Usage patterns and best practices
+- **[Developer Guide](specs/001-sdd-plugin/claude-developer-guide.md)** - Claude Code integration
 
-Explore the `samples/` directory for complete examples:
+### Compliance
+- **[Spec Kit Compliance](specs/001-sdd-plugin/compliance.md)** - GitHub Spec Kit alignment
+- **[Requirements Validation](specs/001-sdd-plugin/checklists/requirements.md)** - Quality checklists
 
-### 🟢 **Hello World** (1 hour) - `samples/01-beginner/`
-### 🟡 **Portfolio** (2-4 weeks) - `samples/02-intermediate/`
-### 🔴 **Kanban** (6-8 weeks) - `samples/03-advanced/`
-### 🔵 **Authentication** - `samples/04-reference/`
+## Development
 
-**Details**: [samples/README.md](samples/README.md)
+### Setup
+```bash
+make setup                    # Setup development environment
+make validate                 # Validate plugin configuration
+make test                     # Run plugin tests
+```
 
-## Version
+### Quality Assurance
+```bash
+make quality-check            # Run all quality checks
+make pre-release              # Pre-release validation
+make docs                     # Generate documentation
+```
 
-- **Version**: 1.0.0
-- **Commands**: 9 SDD workflow commands
-- **Dependencies**: Git, Claude Code 2.0.37+
-- **License**: MIT
+## SDD Methodology
+
+### Core Principles
+
+1. **Specification First**: Every project starts with clear requirements
+2. **Quality Gates**: Built-in validation ensures project success
+3. **Continuous Documentation**: Specifications evolve with the project
+4. **Team Collaboration**: Shared understanding through structured documents
+
+### Workflow
+
+1. **Constitution**: Establish project principles and quality standards
+2. **Specification**: Transform ideas into structured requirements
+3. **Planning**: Design technical implementation approach
+4. **Tasks**: Break down into manageable, dependency-organized tasks
+5. **Checklists**: Create quality assurance frameworks
+6. **Implementation**: Execute with clear guidance and validation
+7. **Analysis**: Verify consistency and quality across artifacts
+
+## Contributing
+
+This plugin follows the SDD methodology it promotes. All contributions should:
+
+1. Follow the SDD-compliant file structure
+2. Include comprehensive specifications for new features
+3. Pass all quality checklists and validation
+4. Maintain consistency with existing methodology
+
+## License
+
+MIT License - see [LICENSE](specs/001-sdd-plugin/license.md) for details.
+
+## Repository
+
+**Source**: https://github.com/tlemaire/marketplace
+**Issues**: Report issues via GitHub issues
+**Community**: Join the discussion in the repository discussions
+
+---
+
+**Transform your ideas into successful projects with Spec-Driven Development!**
+
+Start with `/sdd.help` to explore all available commands and features.
