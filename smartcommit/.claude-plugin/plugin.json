@@ -1,12 +1,14 @@
 {
   "name": "smartcommit",
-  "description": "Intelligent commit message generator with automatic changelog management and semantic versioning support for multiple configuration formats (.toml, .json, .yaml)",
-  "version": "1.0.0",
+  "description": "Complete git workflow automation - intelligent commits, changelog management, and releases with implementation scripts",
+  "version": "1.1.0",
   "license": "MIT",
   "homepage": "https://github.com/tlemaire/marketplace",
   "author": {
     "name": "Thierry Lemaire",
     "email": "thierry.lemaire@gmail.com"
   },
-  "commands": "./commands"
+  "commands": "./commands",
+  "scripts": "./scripts",
+  "samples": "./samples"
 }

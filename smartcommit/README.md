@@ -378,11 +378,12 @@ Explore the `samples/` directory for complete examples:
 
 ## Version
 
-- **Version**: 1.0.0
-- **Commands**: 4 core commands with extensive options
-- **Languages**: Support for 10+ programming languages
-- **Configuration**: JSON, TOML, YAML, XML formats
+- **Version**: 1.1.0
+- **Commands**: 2 main slash commands (commit, help) with comprehensive options
+- **Implementation**: Bash script with full automation capabilities
+- **Languages**: Support for 10+ programming languages and configuration formats
 - **License**: MIT
+- **Samples**: Simple, multi-language, and enterprise examples
 
 ---
 
