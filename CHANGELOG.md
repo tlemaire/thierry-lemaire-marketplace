@@ -25,6 +25,22 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## [Unreleased]
 
+### 🆕 Added
+- Complete TDD (Test-Driven Development) integration to SDD workflow
+- 4 new TDD commands: /sdd.tdd.specify, /sdd.tdd.design, /sdd.tdd.implement, /sdd.tdd.coverage
+- Smart entry points: QUICKSTART.md, COMMANDS.md, HELP.md, START.md for better usability
+- 6 comprehensive templates: TDD workflow, quality gates, project templates
+- Interactive help system with problem-oriented guidance
+- Visual command reference with categorized commands
+- Progressive learning paths from beginner to enterprise
+
+### 🔄 Changed
+- Enhanced SDD workflow from 9-step to 13-step with TDD integration
+- Updated all documentation to include TDD examples and best practices
+- Improved Claude Code usability with context-aware help system
+- Added Red-Green-Refactor cycle guidance throughout workflow
+- Enhanced sample projects with testing-focused examples
+
 ## [1.5.0] - 2025-11-15
 
 ### 🆕 Added
