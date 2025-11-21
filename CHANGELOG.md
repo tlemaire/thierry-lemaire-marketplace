@@ -5,6 +5,25 @@ All notable changes to the marketplace plugins will be documented in this file.
 The format is based on **[Keep a Changelog v1.1.0](https://keepachangelog.com/en/1.1.0/)**,
 and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0.0.html)**.
 
+## [1.7.0] - 2025-11-21
+
+### 🆕 Added
+- **Complete TDD Integration**: Full Test-Driven Development workflow integrated into SDD methodology
+- **4 New TDD Commands**: `/sdd.tdd.specify`, `/sdd.tdd.design`, `/sdd.tdd.implement`, `/sdd.tdd.coverage` for comprehensive testing
+- **Smart Entry Points**: QUICKSTART.md, COMMANDS.md, HELP.md, START.md for 5-minute getting started experience
+- **6 Comprehensive Templates**: TDD workflow, quality gates, project constitution, README templates
+- **Interactive Help System**: Problem-oriented guidance with natural language support
+- **Visual Command Reference**: Categorized commands with popular combinations and quick tips
+- **Progressive Learning Paths**: From beginner (3-step) to enterprise (13-step) workflows
+- **35,000+ Lines Documentation**: Complete TDD integration examples and best practices
+
+### 🔄 Changed
+- **Enhanced SDD Workflow**: Expanded from 9-step to 13-step with integrated TDD methodology
+- **Claude Code Usability**: Reduced cognitive load with smart entry points and progressive disclosure
+- **Documentation Overhaul**: Updated all documentation with TDD examples and Red-Green-Refactor guidance
+- **Sample Projects Enhancement**: All sample projects now include TDD integration examples
+- **Command Organization**: Better categorization and visual reference for improved discoverability
+
 ## [1.6.0] - 2025-11-19
 
 ### 🆕 Added
@@ -24,22 +43,6 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 - **Documentation Organization**: Improved documentation structure and cross-references
 
 ## [Unreleased]
-
-### 🆕 Added
-- Complete TDD (Test-Driven Development) integration to SDD workflow
-- 4 new TDD commands: /sdd.tdd.specify, /sdd.tdd.design, /sdd.tdd.implement, /sdd.tdd.coverage
-- Smart entry points: QUICKSTART.md, COMMANDS.md, HELP.md, START.md for better usability
-- 6 comprehensive templates: TDD workflow, quality gates, project templates
-- Interactive help system with problem-oriented guidance
-- Visual command reference with categorized commands
-- Progressive learning paths from beginner to enterprise
-
-### 🔄 Changed
-- Enhanced SDD workflow from 9-step to 13-step with TDD integration
-- Updated all documentation to include TDD examples and best practices
-- Improved Claude Code usability with context-aware help system
-- Added Red-Green-Refactor cycle guidance throughout workflow
-- Enhanced sample projects with testing-focused examples
 
 ## [1.5.0] - 2025-11-15
 
