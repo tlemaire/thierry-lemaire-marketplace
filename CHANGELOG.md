@@ -8,6 +8,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 ## [1.7.0] - 2025-11-21
 
 ### 🆕 Added
+- Add Python functionality
 - **Complete TDD Integration**: Full Test-Driven Development workflow integrated into SDD methodology
 - **4 New TDD Commands**: `/sdd.tdd.specify`, `/sdd.tdd.design`, `/sdd.tdd.implement`, `/sdd.tdd.coverage` for comprehensive testing
 - **Smart Entry Points**: QUICKSTART.md, COMMANDS.md, HELP.md, START.md for 5-minute getting started experience
@@ -27,6 +28,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 ## [1.6.0] - 2025-11-19
 
 ### 🆕 Added
+- Add Python functionality
 - **SDD-Enhanced Memory System**: Complete `.specify/memory/` directory structure with constitution management
 - **SDD Structure Validation**: New `/sdd.validate` command for compliance checking and auto-fixing
 - **Comprehensive Quality Checklists**: Requirements, UX, performance, accessibility, and security validation templates
@@ -44,9 +46,14 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## [Unreleased]
 
+### 📚 Documentation
+- Update documentation
+- Update documentation, configuration
+
 ## [1.5.0] - 2025-11-15
 
 ### 🆕 Added
+- Add Python functionality
 - **Complete Claude Proxy Infrastructure**: Full Express.js server with TypeScript configuration and multi-provider support
 - **GLM 4.6 Production Ready**: Complete project infrastructure supporting all AI providers (vLLM, Ollama, OpenAI, GLM)
 - **API Routes & Handlers**: Anthropic-compatible endpoints with streaming support and error handling
@@ -62,6 +69,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 ## [1.4.0] - 2025-11-15
 
 ### 🆕 Added
+- Add Python functionality
 - **GitHub Spec Kit Compliance Analysis**: Comprehensive SPEC_KIT_COMPLIANCE.md documentation with 100% compliance certification
 - **Professional Documentation**: Complete workflow analysis, feature comparison matrix, and compliance validation
 - **GLM 4.6 Integration**: Complete GLM 4.6 support via Z.AI with direct Claude Code compatibility
@@ -82,12 +90,14 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 ## [1.3.1] - 2025-11-12
 
 ### 🆕 Added
+- Add Python functionality
 - **SmartCommit Version Management**: Automatic version release creation with semantic version bump logic
 - **Intelligent Version Bumping**: Patch for fixes, minor for features, major for breaking changes
 
 ## [1.3.0] - 2025-11-12
 
 ### 🆕 Added
+- Add Python functionality
 - **Marketplace README Enhancement**: Comprehensive marketplace guide with professional presentation and complete plugin information
 
 ### 🔄 Changed
@@ -100,6 +110,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 ## [1.2.0] - 2025-11-10
 
 ### 🆕 Added
+- Add Python functionality
 - **Global CHANGELOG.md**: Unified changelog management for all marketplace plugins
 - **SmartCommit Enhancement**: Automatic global CHANGELOG.md creation and management
 
@@ -116,6 +127,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 ## [1.1.0] - 2025-11-08
 
 ### 🆕 Added
+- Add Python functionality
 - **SmartCommit Plugin**: Intelligent commit message generation with automatic changelog updates and commit execution
 - **SDD Plugin**: Spec-Driven Development workflow with 9 commands for systematic development
 
